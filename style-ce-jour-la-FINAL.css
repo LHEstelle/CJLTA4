@@ -1,72 +1,89 @@
-/* ============================================
-   CE JOUR-LÀ - CSS FINAL OPTIMISÉ
-   Base : ancien style conservé
-   Améliorations : palette dorée + polices + A4
-   ============================================ */
+/* ═══════════════════════════════════════════════════════════════════
+   🎭 CE JOUR-LÀ - CSS ULTRA-LUXE ART DÉCO
+   Version Premium avec VRAI OR brillant & caractère fort
+   ═══════════════════════════════════════════════════════════════════ */
+
+/* Import des polices premium */
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;900&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,600&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Montserrat:wght@200;300;400;500;600;700;800&display=swap');
 
 :root {
-  /* NOUVELLE PALETTE DORÉE (conservée) */
-  --blue-premium: #0b1a2b;
-  --gold-a: #6f5820;
-  --gold-b: #9e7b23;
-  --gold-c: #e0c067;
-  --gold-d: #7a6223;
-  --gold-gradient: linear-gradient(103deg, 
-    var(--gold-d), 
-    var(--gold-a) 16%, 
-    var(--gold-b) 36%, 
-    var(--gold-c) 58%, 
-    var(--gold-b) 78%, 
-    var(--gold-a) 92%, 
-    var(--gold-d)
+  /* ═══ PALETTE OR BRILLANT PREMIUM ═══ */
+  --gold-brilliant: #FFD700;        /* Or pur éclatant */
+  --gold-rich: #F4C430;             /* Or riche */
+  --gold-antique: #D4AF37;          /* Or antique */
+  --gold-bronze: #CD7F32;           /* Bronze doré */
+  --gold-copper: #B87333;           /* Cuivre */
+  --gold-dark: #8B6914;             /* Or sombre */
+  
+  /* Gradients or ultra-luxe */
+  --gold-gradient-shine: linear-gradient(135deg, 
+    #F4C430 0%, 
+    #FFD700 25%, 
+    #FFED4E 50%, 
+    #FFD700 75%, 
+    #D4AF37 100%
   );
   
-  /* Extensions couleurs */
-  --blue-dark: #0b1a2b;
-  --blue-medium: #1a2d42;
-  --blue-light: #2a3d52;
+  --gold-gradient-deep: linear-gradient(180deg,
+    #B87333 0%,
+    #D4AF37 30%,
+    #FFD700 50%,
+    #D4AF37 70%,
+    #8B6914 100%
+  );
   
-  --gold-dark: #6f5820;
-  --gold-medium: #9e7b23;
-  --gold-light: #e0c067;
-  --gold-extralight: #f5e6c8;
+  --gold-gradient-radial: radial-gradient(circle,
+    #FFD700 0%,
+    #F4C430 40%,
+    #D4AF37 80%,
+    #8B6914 100%
+  );
   
-  /* Neutres */
-  --white-pure: #ffffff;
-  --white-soft: #fafaf8;
-  --cream: #f5f0e8;
-  --ivory: #fffef7;
-  --gray-light: #e8e8e8;
-  --gray-medium: #cccccc;
-  --noir: #1a1a1a;
-  --gris-fonce: #4a4a4a;
-  --gris: #7a7a7a;
-  --gris-clair: #d0d0d0;
-  --blanc: #ffffff;
+  /* ═══ PALETTE NAVY PROFOND ═══ */
+  --navy-deepest: #0A1628;          /* Navy le plus profond */
+  --navy-dark: #0F1F3A;             /* Navy sombre */
+  --navy-medium: #1A2F4D;           /* Navy moyen */
+  --navy-light: #2A4064;            /* Navy clair */
+  --navy-soft: #3A5080;             /* Navy doux */
   
-  /* Typographie */
-  --font-heading: 'Playfair Display', serif;
-  --font-body: 'Montserrat', sans-serif;
-  --font-decorative: 'Cormorant Garamond', serif;
+  /* ═══ NEUTRES IVOIRE ═══ */
+  --ivory-pure: #FFFFF0;            /* Ivoire pur */
+  --ivory-soft: #FFF8DC;            /* Ivoire doux (cornsilk) */
+  --cream-rich: #FAF0E6;            /* Crème lin */
+  --cream-warm: #FFF5E1;            /* Crème pêche */
+  --pearl: #F8F6F0;                 /* Perle */
   
-  /* Espacements */
-  --spacing-xs: 8px;
-  --spacing-sm: 16px;
-  --spacing-md: 24px;
+  /* ═══ TYPOGRAPHIE LUXE ═══ */
+  --font-luxury: 'Cinzel', serif;           /* Titres majestueux */
+  --font-elegant: 'Cormorant Garamond', serif;  /* Corps élégant */
+  --font-refined: 'Lora', serif;            /* Texte raffiné */
+  --font-modern: 'Montserrat', sans-serif;  /* Moderne */
+  
+  /* ═══ ESPACEMENTS A4 OPTIMISÉS ═══ */
+  --margin-page: 28mm;              /* Marges principales */
+  --margin-top: 30mm;               /* Marge haute */
+  --margin-bottom: 25mm;            /* Marge basse */
+  --spacing-xs: 6px;
+  --spacing-sm: 12px;
+  --spacing-md: 20px;
   --spacing-lg: 32px;
   --spacing-xl: 48px;
   --spacing-xxl: 64px;
   
-  /* Ombres */
-  --shadow-soft: 0 2px 8px rgba(11, 26, 43, 0.08);
-  --shadow-medium: 0 4px 16px rgba(11, 26, 43, 0.12);
-  --shadow-strong: 0 8px 24px rgba(11, 26, 43, 0.16);
-  --shadow-gold: 0 4px 12px rgba(158, 123, 35, 0.15);
+  /* ═══ EFFETS & OMBRES ═══ */
+  --shadow-gold-soft: 0 2px 12px rgba(244, 196, 48, 0.25);
+  --shadow-gold-medium: 0 4px 20px rgba(255, 215, 0, 0.35);
+  --shadow-gold-strong: 0 8px 32px rgba(212, 175, 55, 0.45);
+  --shadow-navy: 0 4px 16px rgba(10, 22, 40, 0.3);
+  --shadow-deep: 0 10px 40px rgba(10, 22, 40, 0.4);
+  
+  --glow-gold: 0 0 20px rgba(255, 215, 0, 0.6);
+  --glow-soft: 0 0 15px rgba(244, 196, 48, 0.4);
 }
 
-/* ============================================
-   RESET & BASE
-   ============================================ */
+/* ═══════════════════════════════════════════════════════════════════
+   🎯 RESET & BASE
+   ═══════════════════════════════════════════════════════════════════ */
 
 * {
   margin: 0;
@@ -74,751 +91,461 @@
   box-sizing: border-box;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&family=Libre+Franklin:wght@300;400;500;600;700&family=Merriweather:ital,wght@0,400;0,700;1,400&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,500&family=Montserrat:wght@300;400;500;600;700&family=Caveat:wght@400;700&display=swap');
+html {
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+}
 
 body {
-  font-family: var(--font-body);
-  color: var(--blue-dark);
-  background: var(--cream);
-  line-height: 1.6;
+  font-family: var(--font-elegant);
+  color: var(--navy-dark);
+  background: var(--cream-warm);
+  line-height: 1.7;
+  font-size: 15px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* Format page A4 pour impression */
+/* ═══════════════════════════════════════════════════════════════════
+   📄 FORMAT PAGE A4 LUXE
+   ═══════════════════════════════════════════════════════════════════ */
+
+@page {
+  size: A4;
+  margin: 0;
+}
+
 .page {
   width: 210mm;
   min-height: 297mm;
-  max-height: 297mm;
-  padding: 15mm;
-  background: var(--white-pure);
+  padding: var(--margin-top) var(--margin-page) var(--margin-bottom);
+  background: var(--ivory-pure);
   margin: 0 auto 20px;
   position: relative;
   page-break-after: always;
+  page-break-inside: avoid;
   overflow: hidden;
-  box-shadow: var(--shadow-medium);
+  box-shadow: var(--shadow-deep);
+}
+
+/* Bordure dorée de luxe sur toutes les pages */
+.page::before {
+  content: '';
+  position: absolute;
+  top: 15mm;
+  left: 15mm;
+  right: 15mm;
+  bottom: 15mm;
+  border: 3px solid transparent;
+  border-image: var(--gold-gradient-shine) 1;
+  pointer-events: none;
+  opacity: 0.6;
+}
+
+/* Motif Art Déco subtil en arrière-plan */
+.page::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: 
+    repeating-linear-gradient(
+      90deg,
+      transparent,
+      transparent 40px,
+      var(--gold-brilliant) 40px,
+      var(--gold-brilliant) 40.5px
+    ),
+    repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 40px,
+      var(--gold-brilliant) 40px,
+      var(--gold-brilliant) 40.5px
+    );
+  opacity: 0.02;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.page > * {
+  position: relative;
+  z-index: 1;
 }
 
 @media print {
   .page {
     margin: 0;
     box-shadow: none;
+    page-break-after: always;
   }
+  
   body {
     background: white;
   }
 }
 
-/* ============================================
-   TYPOGRAPHIE GLOBALE
-   ============================================ */
+/* ═══════════════════════════════════════════════════════════════════
+   🎨 ÉLÉMENTS DÉCORATIFS ART DÉCO
+   ═══════════════════════════════════════════════════════════════════ */
 
-h1, h2, h3, h4, h5, h6 {
-  font-family: var(--font-heading);
-  font-weight: 700;
-  color: var(--blue-dark);
-  line-height: 1.2;
-}
-
-h1 {
-  font-size: 36px;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-}
-
-h2 {
-  font-size: 28px;
-  letter-spacing: 1.5px;
-}
-
-h3 {
-  font-size: 20px;
-  letter-spacing: 1px;
-}
-
-h4 {
-  font-size: 16px;
-  letter-spacing: 0.5px;
-}
-
-p {
-  font-size: 13px;
-  line-height: 1.7;
-  margin-bottom: var(--spacing-sm);
-}
-
-.text-center { text-align: center; }
-.text-gold { color: var(--gold-light); }
-.text-blue { color: var(--blue-dark); }
-.text-uppercase { text-transform: uppercase; letter-spacing: 2px; }
-
-/* ============================================
-   ORNEMENTS ART DÉCO
-   ============================================ */
-
+/* Ligne ornementale dorée */
 .ornament-line {
-  width: 100%;
   height: 2px;
-  background: linear-gradient(
-    to right,
-    transparent,
-    var(--gold-light) 20%,
-    var(--gold-light) 80%,
-    transparent
-  );
-  margin: var(--spacing-md) 0;
-}
-
-.divider {
-  width: 130px;
-  height: 1px;
-  background: linear-gradient(90deg, 
-    transparent 0%, 
-    var(--gold-medium) 50%, 
-    transparent 100%);
-  margin: 15px auto;
-}
-
-/* Coins décoratifs */
-.corner {
-  position: absolute;
-  width: 35px;
-  height: 35px;
-  border: 2.5px solid var(--gold-light);
-}
-
-.corner.tl { top: 9mm; left: 9mm; border-right: none; border-bottom: none; }
-.corner.tr { top: 9mm; right: 9mm; border-left: none; border-bottom: none; }
-.corner.bl { bottom: 9mm; left: 9mm; border-right: none; border-top: none; }
-.corner.br { bottom: 9mm; right: 9mm; border-left: none; border-top: none; }
-
-.stars-pattern {
-  font-size: 12px;
-  color: var(--gold-light);
-  letter-spacing: 8px;
-  opacity: 0.6;
-}
-
-/* ============================================
-   UTILITAIRES
-   ============================================ */
-
-.mt-xs { margin-top: var(--spacing-xs); }
-.mt-sm { margin-top: var(--spacing-sm); }
-.mt-md { margin-top: var(--spacing-md); }
-.mt-lg { margin-top: var(--spacing-lg); }
-.mt-xl { margin-top: var(--spacing-xl); }
-
-.mb-xs { margin-bottom: var(--spacing-xs); }
-.mb-sm { margin-bottom: var(--spacing-sm); }
-.mb-md { margin-bottom: var(--spacing-md); }
-.mb-lg { margin-bottom: var(--spacing-lg); }
-.mb-xl { margin-bottom: var(--spacing-xl); }
-
-.highlight-box {
-  background: var(--gold-extralight);
-  padding: var(--spacing-md);
-  border-left: 4px solid var(--gold-medium);
-  margin: var(--spacing-md) 0;
-  font-style: italic;
-}
-
-.custom-list {
-  list-style: none;
-  padding-left: 0;
-}
-
-.custom-list li {
+  background: var(--gold-gradient-shine);
+  margin: var(--spacing-md) auto;
   position: relative;
-  padding-left: 25px;
-  margin-bottom: var(--spacing-sm);
+  max-width: 400px;
+  box-shadow: var(--shadow-gold-soft);
 }
 
-.custom-list li::before {
+.ornament-line::before,
+.ornament-line::after {
   content: '◆';
   position: absolute;
-  left: 0;
-  color: var(--gold-light);
-  font-size: 12px;
-}
-
-
-/* ============================================
-   PAGE 1 : AFFICHE JOURNAL (Couverture)
-   Style ANCIEN conservé
-   ============================================ */
-
-.affiche-journal .page,
-.page.affiche-journal {
-  padding: 10mm 9mm;
-  background: 
-    linear-gradient(to bottom, rgba(255,255,255,0.3), rgba(255,255,255,0)),
-    url('https://www.transparenttextures.com/patterns/concrete-wall.png'),
-    #f5f3ed;
-  background-blend-mode: normal, multiply, normal;
-  background-color: #f5f3ed;
-}
-
-/* Masthead */
-.masthead {
-  text-align: center;
-  border-top: 3px double var(--blue-dark);
-  border-bottom: 3px double var(--blue-dark);
-  padding: 9px 0;
-  margin-bottom: 12px;
-}
-
-.journal-name {
-  font-family: 'Playfair Display', serif;
-  font-size: 36px;
-  font-weight: 900;
-  letter-spacing: 8px;
-  color: var(--blue-dark);
-  text-transform: uppercase;
-  margin-bottom: 3px;
-}
-
-.date-info {
-  font-family: 'Libre Franklin', sans-serif;
-  font-size: 11px;
-  color: var(--blue-light);
-  letter-spacing: 1px;
-  font-weight: 400;
-  font-style: italic;
-}
-
-/* Headline */
-.headline-section {
-  border-bottom: 2px solid var(--blue-dark);
-  padding-bottom: 11px;
-  margin-bottom: 12px;
-}
-
-.kicker {
-  font-family: 'Libre Franklin', sans-serif;
-  font-size: 9px;
-  color: var(--gold-dark);
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  font-weight: 600;
-  text-align: center;
-  margin-bottom: 7px;
-}
-
-.main-headline {
-  font-family: 'Playfair Display', serif;
-  font-size: 26px;
-  font-weight: 700;
-  line-height: 1.15;
-  color: var(--blue-dark);
-  text-align: center;
-  margin-bottom: 10px;
-  letter-spacing: 0.5px;
-}
-
-.story {
-  font-family: 'Merriweather', serif;
-  font-size: 11px;
-  line-height: 1.7;
-  color: var(--noir);
-  text-align: justify;
-}
-
-.story::first-letter {
-  font-family: 'Playfair Display', serif;
-  font-size: 52px;
-  font-weight: 700;
-  color: var(--gold-medium);
-  float: left;
-  line-height: 0;
-  margin-right: 10px;
-  margin-top: 0.1px;
-  padding-right: 5px;
-}
-
-/* IMAGE ÉVÉNEMENT */
-.event-photo {
-  margin-bottom: 12px;
-  border: 1px solid var(--gris-clair);
-  padding: 8px;
-  background: rgba(255,255,255,0.85);
-}
-
-.event-photo-img {
-  width: 100%;
-  height: 90mm;
-  object-fit: cover;
-  margin-bottom: 6px;
-  border: 1px solid var(--gris-clair);
-  filter: grayscale(10%) contrast(1.02) sepia(3%);
-}
-
-.event-photo-caption {
-  font-family: 'Libre Franklin', sans-serif;
-  font-size: 9px;
-  line-height: 1.4;
-  color: var(--gris-fonce);
-  font-style: italic;
-  text-align: center;
-}
-
-/* Sections */
-.section-divider {
-  border-top: 1px solid var(--gris-clair);
-  margin: 11px 0;
-}
-
-.section-title {
-  font-family: 'Libre Franklin', sans-serif;
-  font-size: 9px;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 1.5px;
-  color: var(--blue-dark);
-  border-bottom: 2px solid var(--gold-medium);
-  padding-bottom: 4px;
-  margin-bottom: 9px;
-  text-align: center;
-}
-
-/* Ambiance */
-.ambiance-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 0;
-  margin-bottom: 11px;
-}
-
-.ambiance-column {
-  padding: 0 12px;
-  border-right: 1px solid var(--gris-clair);
-  text-align: center;
-}
-
-.ambiance-column:last-child {
-  border-right: none;
-}
-
-.ambiance-column:first-child {
-  padding-left: 0;
-}
-
-.ambiance-header {
-  font-family: 'Libre Franklin', sans-serif;
-  font-size: 8px;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 1.2px;
-  color: var(--blue-light);
-  border-bottom: 1px solid var(--gold-medium);
-  padding-bottom: 4px;
-  margin-bottom: 7px;
-}
-
-.ambiance-icon {
-  font-size: 26px;
-  margin-bottom: 6px;
-  display: block;
-}
-
-.ambiance-content {
-  font-family: 'Merriweather', serif;
-  font-size: 11px;
-  line-height: 1.4;
-  color: var(--noir);
-}
-
-/* Layout 2 colonnes */
-.main-layout {
-  display: grid;
-  grid-template-columns: 1.6fr 1.4fr;
-  gap: 0;
-  margin-bottom: 11px;
-}
-
-.main-column {
-  padding-right: 14px;
-  border-right: 1px solid var(--gris-clair);
-}
-
-.sidebar {
-  padding-left: 14px;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-/* Histoire */
-.histoire-list {
-  display: flex;
-  flex-direction: column;
-  gap: 7px;
-}
-
-.histoire-item {
-  font-family: 'Merriweather', serif;
-  font-size: 10px;
-  line-height: 1.5;
-  color: var(--noir);
-  padding-left: 11px;
-  position: relative;
-}
-
-.histoire-item::before {
-  content: '▪';
-  position: absolute;
-  left: 0;
-  color: var(--gold-dark);
-  font-weight: 700;
-}
-
-.histoire-label {
-  font-family: 'Libre Franklin', sans-serif;
-  font-size: 8px;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.8px;
-  color: var(--blue-light);
-  display: block;
-  margin-bottom: 2px;
-}
-
-.histoire-year {
-  font-weight: 700;
-  color: var(--gold-dark);
-}
-
-/* Sidebar boxes */
-.sidebar-box {
-  border: 1px solid var(--gris-clair);
-  padding: 9px 8px;
-  background: rgba(255,255,255,0.85);
-}
-
-.sidebar-box-dark {
-  background: linear-gradient(135deg, var(--blue-dark) 0%, var(--blue-medium) 100%);
-  color: var(--blanc);
-  border: 1px solid var(--blue-dark);
-}
-
-.sidebar-title {
-  font-family: 'Libre Franklin', sans-serif;
-  font-size: 9px;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 1.3px;
-  text-align: center;
-  margin-bottom: 7px;
-  padding-bottom: 4px;
-}
-
-.sidebar-title-light {
-  color: var(--blue-light);
-  border-bottom: 1px solid var(--gold-medium);
-}
-
-.sidebar-title-dark {
-  color: var(--gold-light);
-  border-bottom: 1px solid rgba(228, 196, 161, 0.3);
-}
-
-.sidebar-content {
-  font-family: 'Merriweather', serif;
-  font-size: 10px;
-  line-height: 1.5;
-  text-align: center;
-}
-
-.sidebar-content-dark {
-  color: var(--blanc);
-  font-style: italic;
-  text-align: justify;
-  opacity: 0.96;
-}
-
-.sidebar-icon {
-  font-size: 22px;
-  margin-bottom: 5px;
-  display: block;
-}
-
-/* Info bar */
-.info-bar {
-  background: linear-gradient(to right, var(--gold-light), #f0e5d1, var(--gold-light));
-  border-top: 2px solid var(--gold-dark);
-  border-bottom: 2px solid var(--gold-dark);
-  padding: 10px 12px;
-  text-align: center;
-  margin-bottom: 11px;
-}
-
-.info-text {
-  font-family: 'Merriweather', serif;
-  font-size: 10px;
-  line-height: 1.4;
-  color: var(--noir);
-  font-style: italic;
-}
-
-.info-number {
-  font-family: 'Playfair Display', serif;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--gold-brilliant);
   font-size: 16px;
-  font-weight: 700;
-  color: var(--gold-dark);
+  text-shadow: var(--glow-soft);
 }
 
-/* NASA */
-.nasa-section {
-  border: 1px solid var(--gris-clair);
-  padding: 9px;
-  background: rgba(255,255,255,0.85);
+.ornament-line::before {
+  left: -30px;
 }
 
-.nasa-title {
-  font-family: 'Libre Franklin', sans-serif;
-  font-size: 9px;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 1.2px;
-  color: var(--blue-light);
+.ornament-line::after {
+  right: -30px;
+}
+
+/* Séparateur géométrique */
+.deco-separator {
   text-align: center;
-  margin-bottom: 7px;
-}
-
-.nasa-img {
-  width: 100%;
-  height: 80px;
-  object-fit: cover;
-  margin-bottom: 6px;
-  border: 1px solid var(--gris-clair);
-}
-
-.nasa-caption {
-  font-family: 'Merriweather', serif;
-  font-size: 8px;
-  line-height: 1.3;
-  color: var(--gris);
-  text-align: center;
-  font-style: italic;
-}
-
-
-/* ============================================
-   PAGE 2 : EXPLICATIONS JOURNAL
-   Style ANCIEN conservé
-   ============================================ */
-
-.journal-page {
-  background: var(--cream);
-  padding: var(--spacing-md);
-}
-
-.journal-header {
-  text-align: center;
-  border-bottom: 4px double var(--blue-dark);
-  padding-bottom: var(--spacing-md);
-  margin-bottom: var(--spacing-lg);
-}
-
-.journal-masthead {
-  font-family: 'Libre Baskerville', serif;
-  font-size: 36px;
-  font-weight: 700;
-  color: var(--blue-dark);
-  letter-spacing: 3px;
-  text-transform: uppercase;
-  margin-bottom: var(--spacing-xs);
-}
-
-.journal-date {
-  font-size: 14px;
-  color: var(--gold-medium);
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  font-weight: 600;
-}
-
-.journal-hero {
-  text-align: center;
-  margin-bottom: var(--spacing-lg);
-  padding: var(--spacing-md) 0;
-  border-bottom: 2px solid var(--gold-light);
-}
-
-.journal-headline {
-  font-family: var(--font-heading);
+  margin: var(--spacing-lg) 0;
   font-size: 24px;
-  color: var(--blue-dark);
-  line-height: 1.2;
-  margin-bottom: var(--spacing-sm);
+  color: var(--gold-brilliant);
+  letter-spacing: 20px;
+  text-shadow: var(--glow-gold);
 }
 
-.journal-subhead {
-  font-size: 13px;
-  color: var(--gold-medium);
-  font-style: italic;
-  line-height: 1.4;
+/* Coin décoratif Art Déco */
+.deco-corner {
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  border: 3px solid var(--gold-brilliant);
+  box-shadow: var(--shadow-gold-medium);
 }
 
-.article-narratif {
-  background: var(--white-pure);
-  padding: var(--spacing-xl);
-  border: 2px solid var(--gold-light);
-  box-shadow: 0 2px 8px rgba(11, 26, 43, 0.08);
+.deco-corner.top-left {
+  top: 20mm;
+  left: 20mm;
+  border-right: none;
+  border-bottom: none;
 }
 
-.article-paragraph {
-  font-family: 'Libre Baskerville', serif;
-  font-size: 14px;
-  line-height: 1.9;
-  color: var(--noir);
-  text-align: justify;
-  margin-bottom: var(--spacing-lg);
-  column-count: 2;
-  column-gap: var(--spacing-xl);
+.deco-corner.top-right {
+  top: 20mm;
+  right: 20mm;
+  border-left: none;
+  border-bottom: none;
 }
 
-.article-lettrine {
-  font-family: var(--font-heading);
-  font-size: 64px;
-  line-height: 0.8;
-  float: left;
-  color: var(--gold-dark);
-  margin: 8px 12px 0 0;
-  font-weight: 700;
+.deco-corner.bottom-left {
+  bottom: 20mm;
+  left: 20mm;
+  border-right: none;
+  border-top: none;
 }
 
-.journal-footer {
-  text-align: center;
-  margin-top: var(--spacing-lg);
-  padding-top: var(--spacing-md);
-  border-top: 2px solid var(--blue-dark);
-  font-size: 11px;
-  color: var(--gold-medium);
-  font-style: italic;
+.deco-corner.bottom-right {
+  bottom: 20mm;
+  right: 20mm;
+  border-left: none;
+  border-top: none;
 }
 
+/* ═══════════════════════════════════════════════════════════════════
+   📝 TYPOGRAPHIE LUXE
+   ═══════════════════════════════════════════════════════════════════ */
 
-/* ============================================
-   PAGE 3 : CARTE D'IDENTITÉ (Profil d'époque)
-   Style ANCIEN conservé
-   ============================================ */
-
+/* En-têtes de page */
 .page-header {
   text-align: center;
   margin-bottom: var(--spacing-xl);
+  padding-bottom: var(--spacing-md);
+  border-bottom: 3px solid transparent;
+  border-image: var(--gold-gradient-shine) 1;
+  position: relative;
+}
+
+.page-header::after {
+  content: '✦';
+  position: absolute;
+  bottom: -18px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 28px;
+  color: var(--gold-brilliant);
+  background: var(--ivory-pure);
+  padding: 0 15px;
+  text-shadow: var(--glow-gold);
 }
 
 .page-title {
-  font-size: 28px;
-  color: var(--gold-medium);
-  margin-bottom: var(--spacing-md);
+  font-family: var(--font-luxury);
+  font-size: 36px;
+  font-weight: 700;
+  color: var(--navy-deepest);
+  letter-spacing: 3px;
+  margin: 0;
+  text-transform: uppercase;
+  text-shadow: 2px 2px 0 rgba(244, 196, 48, 0.15);
 }
 
-.identity-card {
-  background: linear-gradient(135deg, var(--blue-dark) 0%, var(--blue-medium) 100%);
-  color: var(--white-soft);
-  padding: var(--spacing-xl);
+.page-subtitle {
+  font-family: var(--font-elegant);
+  font-size: 18px;
+  font-weight: 400;
+  color: var(--gold-antique);
+  font-style: italic;
+  margin-top: var(--spacing-sm);
+  letter-spacing: 2px;
+}
+
+/* Titres de sections */
+h1, h2, h3, h4 {
+  font-family: var(--font-luxury);
+  color: var(--navy-deepest);
+  margin-bottom: var(--spacing-md);
+  line-height: 1.3;
+}
+
+h1 {
+  font-size: 48px;
+  font-weight: 900;
+  letter-spacing: 4px;
+  background: var(--gold-gradient-shine);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-shadow: 0 4px 8px rgba(244, 196, 48, 0.3);
+}
+
+h2 {
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--navy-dark);
+  border-bottom: 2px solid var(--gold-brilliant);
+  padding-bottom: var(--spacing-sm);
+  display: inline-block;
+}
+
+h3 {
+  font-size: 24px;
+  font-weight: 600;
+  color: var(--gold-antique);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+h4 {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--navy-medium);
+}
+
+/* Paragraphes */
+p {
+  font-family: var(--font-elegant);
+  font-size: 15px;
+  line-height: 1.8;
+  color: var(--navy-dark);
+  margin-bottom: var(--spacing-md);
+  text-align: justify;
+}
+
+/* Lettrine luxe */
+p.with-dropcap::first-letter {
+  font-family: var(--font-luxury);
+  font-size: 72px;
+  font-weight: 900;
+  line-height: 60px;
+  float: left;
+  margin: 5px 15px 0 0;
+  background: var(--gold-gradient-shine);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-shadow: 2px 2px 4px rgba(244, 196, 48, 0.3);
+}
+
+/* Citations élégantes */
+blockquote {
+  font-family: var(--font-elegant);
+  font-size: 18px;
+  font-style: italic;
+  color: var(--navy-medium);
+  border-left: 4px solid var(--gold-brilliant);
+  padding: var(--spacing-md) var(--spacing-lg);
+  margin: var(--spacing-lg) 0;
+  background: var(--cream-rich);
   position: relative;
+  box-shadow: var(--shadow-gold-soft);
+}
+
+blockquote::before {
+  content: '"';
+  font-size: 60px;
+  font-family: var(--font-luxury);
+  color: var(--gold-brilliant);
+  position: absolute;
+  top: -10px;
+  left: 10px;
+  opacity: 0.4;
+}
+
+/* ═══════════════════════════════════════════════════════════════════
+   🎴 CARTES & CONTENEURS
+   ═══════════════════════════════════════════════════════════════════ */
+
+/* Carte identité premium */
+.identity-card {
+  background: linear-gradient(135deg, var(--ivory-pure) 0%, var(--cream-warm) 100%);
+  border: 3px solid var(--gold-brilliant);
+  padding: var(--spacing-xl);
+  margin: var(--spacing-lg) 0;
+  position: relative;
+  box-shadow: var(--shadow-gold-strong), inset 0 0 30px rgba(255, 215, 0, 0.1);
+  border-radius: 4px;
 }
 
 .identity-card::before {
   content: '';
   position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 4px;
-  background: var(--gold-gradient);
+  top: -3px;
+  left: 30px;
+  right: 30px;
+  height: 6px;
+  background: var(--gold-gradient-shine);
+  box-shadow: var(--glow-soft);
+}
+
+.identity-card::after {
+  content: '✦';
+  position: absolute;
+  font-size: 200px;
+  color: var(--gold-brilliant);
+  opacity: 0.05;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(15deg);
+  pointer-events: none;
 }
 
 .identity-header {
   text-align: center;
+  margin-bottom: var(--spacing-xl);
   padding-bottom: var(--spacing-lg);
-  margin-bottom: var(--spacing-lg);
-  border-bottom: 1px solid rgba(224, 192, 103, 0.3);
+  border-bottom: 2px solid var(--gold-antique);
 }
 
 .identity-icon {
-  width: 100px;
-  height: 100px;
-  margin: 0 auto var(--spacing-md);
-  border: 3px solid var(--gold-light);
-  border-radius: 50%;
-  background: rgba(255, 255, 255, 0.1);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 42px;
+  font-size: 48px;
+  margin-bottom: var(--spacing-sm);
+  filter: drop-shadow(var(--shadow-gold-medium));
 }
 
 .identity-name {
-  font-family: var(--font-heading);
-  font-size: 36px;
-  color: var(--gold-light);
-  margin-bottom: var(--spacing-sm);
-  letter-spacing: 3px;
+  font-family: var(--font-luxury);
+  font-size: 42px;
+  font-weight: 900;
+  color: var(--navy-deepest);
+  letter-spacing: 4px;
   text-transform: uppercase;
+  margin-bottom: var(--spacing-xs);
+  background: var(--gold-gradient-shine);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 .identity-subtitle {
-  font-size: 13px;
-  color: var(--gold-extralight);
-  text-transform: uppercase;
+  font-family: var(--font-elegant);
+  font-size: 16px;
+  color: var(--gold-antique);
+  font-style: italic;
   letter-spacing: 2px;
 }
 
+/* Grille traits */
 .traits-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: var(--spacing-md);
-  margin: var(--spacing-xl) 0;
+  margin: var(--spacing-lg) 0;
 }
 
 .trait-item {
+  background: var(--ivory-soft);
+  border: 2px solid var(--gold-brilliant);
+  padding: var(--spacing-lg) var(--spacing-md);
   text-align: center;
-  padding: var(--spacing-md);
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(224, 192, 103, 0.2);
+  position: relative;
   transition: all 0.3s ease;
+  box-shadow: var(--shadow-gold-soft);
 }
 
-.trait-item:hover {
-  background: rgba(255, 255, 255, 0.1);
-  transform: translateY(-3px);
+.trait-item::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60%;
+  height: 3px;
+  background: var(--gold-gradient-shine);
+  box-shadow: var(--glow-soft);
 }
 
 .trait-icon {
-  font-size: 32px;
+  font-size: 36px;
   margin-bottom: var(--spacing-sm);
+  filter: drop-shadow(2px 2px 4px rgba(244, 196, 48, 0.4));
 }
 
 .trait-label {
+  font-family: var(--font-modern);
   font-size: 11px;
-  color: var(--gold-extralight);
+  font-weight: 600;
+  color: var(--gold-dark);
   text-transform: uppercase;
-  letter-spacing: 1.5px;
+  letter-spacing: 2px;
   margin-bottom: var(--spacing-xs);
 }
 
 .trait-value {
-  font-family: var(--font-decorative);
+  font-family: var(--font-elegant);
   font-size: 18px;
-  color: var(--white-soft);
   font-weight: 600;
+  color: var(--navy-deepest);
+  line-height: 1.4;
 }
 
+/* Info rows */
 .identity-info {
-  margin-top: var(--spacing-xl);
-  padding-top: var(--spacing-lg);
-  border-top: 1px solid rgba(224, 192, 103, 0.3);
+  margin: var(--spacing-lg) 0;
 }
 
 .info-row {
   display: flex;
   justify-content: space-between;
-  padding: var(--spacing-sm) 0;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  align-items: center;
+  padding: var(--spacing-md);
+  border-bottom: 1px solid var(--gold-antique);
+  background: linear-gradient(90deg, transparent 0%, var(--cream-rich) 50%, transparent 100%);
 }
 
 .info-row:last-child {
@@ -826,2205 +553,871 @@ p {
 }
 
 .info-label {
-  color: var(--gold-extralight);
+  font-family: var(--font-modern);
   font-size: 12px;
+  font-weight: 600;
+  color: var(--gold-dark);
   text-transform: uppercase;
-  letter-spacing: 1px;
+  letter-spacing: 1.5px;
 }
 
 .info-value {
-  color: var(--white-soft);
-  font-weight: 600;
-  font-size: 14px;
+  font-family: var(--font-elegant);
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--navy-deepest);
   text-align: right;
-  max-width: 60%;
+  font-style: italic;
 }
 
+/* Tampon authentique */
 .identity-stamp {
   position: absolute;
-  bottom: 20px;
-  right: 20px;
-  width: 70px;
-  height: 70px;
-  border: 2px solid var(--gold-light);
+  top: 40px;
+  right: 40px;
+  width: 100px;
+  height: 100px;
+  border: 4px solid var(--gold-brilliant);
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  transform: rotate(-12deg);
-  opacity: 0.6;
-  background: rgba(224, 192, 103, 0.1);
+  transform: rotate(-15deg);
+  background: radial-gradient(circle, var(--cream-warm) 0%, transparent 70%);
+  box-shadow: var(--shadow-gold-medium);
 }
 
 .stamp-text {
-  font-size: 9px;
+  font-family: var(--font-luxury);
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--gold-brilliant);
+  text-align: center;
   text-transform: uppercase;
   letter-spacing: 1px;
-  text-align: center;
-  line-height: 1.2;
-  color: var(--gold-light);
-  font-weight: 600;
-}
-
-
-/* ============================================
-   PAGE 4 : FICTION HISTORIQUE
-   Style ANCIEN conservé
-   ============================================ */
-
-.fiction-container {
-  padding: var(--spacing-lg) 0;
-}
-
-.fiction-header {
-  text-align: center;
-  margin-bottom: var(--spacing-xxl);
-}
-
-.fiction-title {
-  font-family: var(--font-decorative);
-  font-size: 32px;
-  color: var(--gold-medium);
-  margin-bottom: var(--spacing-md);
-  font-style: italic;
   line-height: 1.3;
+  text-shadow: var(--glow-soft);
 }
 
-.fiction-context {
-  font-size: 13px;
-  color: var(--blue-light);
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  margin-bottom: var(--spacing-sm);
+/* ═══════════════════════════════════════════════════════════════════
+   📊 BOXES & CONTENEURS SPÉCIAUX
+   ═══════════════════════════════════════════════════════════════════ */
+
+/* Box highlight */
+.highlight-box {
+  background: linear-gradient(135deg, var(--navy-deepest) 0%, var(--navy-dark) 100%);
+  color: var(--ivory-pure);
+  padding: var(--spacing-lg);
+  border: 3px solid var(--gold-brilliant);
+  margin: var(--spacing-lg) 0;
+  position: relative;
+  box-shadow: var(--shadow-gold-strong);
 }
 
-.fiction-event {
-  font-size: 16px;
-  color: var(--blue-dark);
-  font-weight: 600;
-  margin-bottom: var(--spacing-md);
+.highlight-box::before {
+  content: '';
+  position: absolute;
+  top: -3px;
+  left: 40px;
+  right: 40px;
+  height: 6px;
+  background: var(--gold-gradient-shine);
+  box-shadow: var(--glow-gold);
 }
 
-.fiction-body {
-  font-family: var(--font-decorative);
-  font-size: 14px;
-  line-height: 1.9;
-  color: var(--blue-dark);
-  text-align: justify;
-  columns: 2;
-  column-gap: var(--spacing-xl);
-  column-rule: 1px solid var(--gray-light);
+.highlight-box p {
+  color: var(--ivory-pure);
+  margin-bottom: 0;
 }
 
-.fiction-body p {
-  margin-bottom: var(--spacing-lg);
-  break-inside: avoid;
+.highlight-box strong {
+  color: var(--gold-brilliant);
+  font-weight: 700;
 }
 
-.fiction-body p:first-of-type::first-letter {
-  font-size: 56px;
-  font-family: var(--font-heading);
-  color: var(--gold-medium);
-  float: left;
-  line-height: 48px;
-  padding-right: 10px;
-  margin-top: 4px;
-}
-
-.fiction-highlight {
-  color: var(--gold-dark);
-  font-weight: 600;
-}
-
-.fiction-illustration-placeholder {
-  width: 100%;
-  height: 200px;
-  background: linear-gradient(135deg, var(--cream), var(--gold-extralight));
-  border: 2px solid var(--gold-light);
-  display: flex;
-  align-items: center;
-  justify-content: center;
+/* Timeline */
+.timeline {
+  position: relative;
+  padding-left: 50px;
   margin: var(--spacing-xl) 0;
-  font-size: 14px;
-  color: var(--gold-medium);
-  font-style: italic;
-  text-align: center;
-  padding: var(--spacing-md);
 }
 
-.fiction-footer {
-  margin-top: var(--spacing-xxl);
-  padding-top: var(--spacing-lg);
-  border-top: 1px solid var(--gold-light);
-  text-align: center;
-}
-
-.fiction-footer-text {
-  font-size: 13px;
-  color: var(--blue-light);
-  font-style: italic;
-}
-
-
-/* ============================================
-   PAGE 5 : MIROIR ÉMOTIONNEL
-   Style ANCIEN conservé
-   ============================================ */
-
-.mirror-container {
-  min-height: 257mm;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  position: relative;
-}
-
-.mirror-background {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: radial-gradient(circle at center, var(--gold-extralight), var(--cream));
-  opacity: 0.5;
-  z-index: 0;
-}
-
-.mirror-content {
-  position: relative;
-  z-index: 2;
-  max-width: 600px;
-  padding: var(--spacing-xxl);
-}
-
-.mirror-icon {
-  font-size: 64px;
-  margin-bottom: var(--spacing-xl);
-}
-
-.mirror-title {
-  font-family: var(--font-decorative);
-  font-size: 28px;
-  color: var(--gold-medium);
-  margin-bottom: var(--spacing-xl);
-  font-style: italic;
-}
-
-.mirror-text {
-  font-size: 17px;
-  line-height: 1.9;
-  color: var(--blue-dark);
-  font-family: var(--font-decorative);
-  margin-bottom: var(--spacing-lg);
-}
-
-.mirror-frame {
-  border: 3px solid var(--gold-light);
-  padding: var(--spacing-xl);
-  position: relative;
-  background: rgba(255, 255, 255, 0.8);
-  backdrop-filter: blur(5px);
-}
-
-.mirror-frame::before,
-.mirror-frame::after {
-  content: '✦';
-  position: absolute;
-  font-size: 24px;
-  color: var(--gold-light);
-}
-
-.mirror-frame::before {
-  top: -12px;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-.mirror-frame::after {
-  bottom: -12px;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-.mirror-signature {
-  margin-top: var(--spacing-xl);
-  font-size: 13px;
-  color: var(--gold-medium);
-  font-style: italic;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-}
-
-
-/* ============================================
-   PAGE 6 : MOODBOARD ANNÉE
-   Style ANCIEN conservé + améliorations
-   ============================================ */
-
-.page.moodboard-page {
-  padding: 8mm;
-  background: #e8dcc8;
-  background-image: url('https://www.transparenttextures.com/patterns/wood-pattern.png');
-  background-color: #e8dcc8;
-}
-
-/* TITRE */
-.year-stamp {
-  position: absolute;
-  top: 8mm;
-  left: 50%;
-  transform: translateX(-50%) rotate(-1deg);
-  background: var(--blue-dark);
-  padding: 12px 32px;
-  border: 3px solid var(--gold-light);
-  box-shadow: 0 6px 20px rgba(0,0,0,0.3);
-  z-index: 100;
-}
-
-.year-stamp-text {
-  font-family: 'Playfair Display', serif;
-  font-size: 42px;
-  font-weight: 900;
-  color: var(--gold-light);
-  letter-spacing: 5px;
-  text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
-}
-
-.year-subtitle {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 9px;
-  color: var(--gold-light);
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  text-align: center;
-  margin-top: 3px;
-  font-weight: 300;
-}
-
-.moodboard {
-  margin-top: 42mm;
-  position: relative;
-  height: 238mm;
-}
-
-/* IMAGE IA MOOD */
-.mood-hero {
-  position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%) rotate(-0.5deg);
-  width: 155mm;
-  height: 78mm;
-  background: white;
-  padding: 9px;
-  box-shadow: 0 8px 25px rgba(0,0,0,0.35);
-  z-index: 5;
-}
-
-.mood-hero::before {
+.timeline::before {
   content: '';
   position: absolute;
-  top: -8px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 55%;
-  height: 18px;
-  background: rgba(255, 253, 208, 0.6);
-  border-left: 1px solid rgba(200, 200, 150, 0.3);
-  border-right: 1px solid rgba(200, 200, 150, 0.3);
-  box-shadow: 0 1px 2px rgba(0,0,0,0.1);
-}
-
-.mood-hero-img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-  filter: saturate(1.1) contrast(1.05);
-}
-
-.mood-hero-label {
-  position: absolute;
-  bottom: -22px;
-  left: 50%;
-  transform: translateX(-50%);
-  background: var(--blue-dark);
-  color: var(--gold-light);
-  padding: 6px 20px;
-  font-family: 'Playfair Display', serif;
-  font-size: 12px;
-  font-weight: 700;
-  letter-spacing: 2px;
-  border: 2px solid var(--gold-light);
-  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-  text-transform: uppercase;
-}
-
-/* 3 MINI POLAROIDS */
-.polaroids-right {
-  position: absolute;
-  top: 10mm;
-  right: 7mm;
-  z-index: 12;
-}
-
-.mini-polaroid {
-  background: white;
-  padding: 5px 5px 20px 5px;
-  box-shadow: 0 3px 8px rgba(0,0,0,0.25);
-  margin-bottom: 5mm;
-  width: 35mm;
-  position: relative;
-}
-
-.mini-polaroid:nth-child(1) { transform: rotate(4deg); }
-.mini-polaroid:nth-child(2) { transform: rotate(-3deg); }
-.mini-polaroid:nth-child(3) { transform: rotate(5deg); }
-
-.mini-polaroid-img {
-  width: 100%;
-  height: 30mm;
-  object-fit: cover;
-  display: block;
-}
-
-.mini-polaroid-caption {
-  position: absolute;
-  bottom: 3px;
-  left: 5px;
-  right: 5px;
-  font-family: 'Caveat', cursive;
-  font-size: 8px;
-  color: #333;
-  text-align: center;
-  font-weight: 700;
-}
-
-.mini-polaroid::before {
-  content: '';
-  position: absolute;
-  top: -5px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 40%;
-  height: 12px;
-  background: rgba(255, 253, 208, 0.5);
-  box-shadow: 0 1px 2px rgba(0,0,0,0.1);
-}
-
-/* CHANSON */
-.postit-song {
-  position: absolute;
-  top: 90mm;
-  left: 7mm;
-  background: #fff59d;
-  padding: 12px 14px;
-  box-shadow: 0 6px 15px rgba(0,0,0,0.25);
-  font-family: 'Permanent Marker', cursive;
-  z-index: 20;
-  width: 70mm;
-  border: 3px solid var(--gold-medium);
-  transform: rotate(-3deg);
-}
-
-.postit-song::before {
-  content: '';
-  position: absolute;
-  top: -7px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 45%;
-  height: 15px;
-  background: rgba(255, 253, 208, 0.6);
-  box-shadow: 0 1px 2px rgba(0,0,0,0.1);
-}
-
-.postit-song-title {
-  font-size: 9px;
-  color: var(--blue-dark);
-  margin-bottom: 7px;
-  text-align: center;
-  font-weight: 700;
-}
-
-.postit-song-main {
-  font-size: 14px;
-  color: var(--blue-dark);
-  margin-bottom: 4px;
-  text-align: center;
-  line-height: 1.25;
-}
-
-.postit-song-artist {
-  font-size: 11px;
-  color: #555;
-  text-align: center;
-}
-
-/* POST-IT BASE */
-.postit {
-  position: absolute;
-  background: #fef9b5;
-  padding: 9px 11px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-  font-family: 'Caveat', cursive;
-}
-
-.postit::before {
-  content: '';
-  position: absolute;
-  top: -5px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 35%;
-  height: 11px;
-  background: rgba(255, 253, 208, 0.5);
-  box-shadow: 0 1px 2px rgba(0,0,0,0.1);
-}
-
-.postit-title {
-  font-size: 14px;
-  font-weight: 700;
-  color: var(--blue-dark);
-  margin-bottom: 7px;
-  text-align: center;
-  border-bottom: 2px solid var(--blue-dark);
-  padding-bottom: 3px;
-}
-
-.postit-item {
-  font-size: 12px;
-  line-height: 1.5;
-  margin-bottom: 4px;
-  color: #333;
-}
-
-.postit-item-icon {
-  font-size: 14px;
-  margin-right: 4px;
-}
-
-.postit-item-label {
-  font-weight: 700;
-  color: var(--blue-dark);
-}
-
-/* 4 POST-ITS */
-.postit-1 { top: 121mm; left: 8mm; width: 70mm; background: #fef9b5; transform: rotate(-2deg); z-index: 15; }
-.postit-2 { top: 125mm; right: 10mm; width: 68mm; background: #ffe4e4; transform: rotate(3deg); z-index: 14; }
-.postit-3 { bottom: 30mm; left: 9mm; width: 65mm; background: #ffe4f9; transform: rotate(2deg); z-index: 13; }
-.postit-4 { bottom: 32mm; right: 11mm; width: 68mm; background: #e4ffe4; transform: rotate(-2deg); z-index: 12; }
-
-/* ÉTIQUETTES PRIX */
-.price-tags {
-  position: absolute;
-  bottom: 8mm;
-  left: 50%;
-  transform: translateX(-50%);
-  display: flex;
-  gap: 5mm;
-  z-index: 18;
-}
-
-.price-tag {
-  background: white;
-  border: 2px solid var(--gold-medium);
-  padding: 5px 10px;
-  font-family: 'Montserrat', sans-serif;
-  box-shadow: 0 3px 8px rgba(0,0,0,0.2);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.price-tag:nth-child(1) { transform: rotate(-2deg); }
-.price-tag:nth-child(2) { transform: rotate(1deg); }
-.price-tag:nth-child(3) { transform: rotate(-3deg); }
-.price-tag:nth-child(4) { transform: rotate(2deg); }
-
-.price-tag-label {
-  font-size: 7px;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-  color: var(--gold-medium);
-  font-weight: 600;
-  margin-bottom: 2px;
-}
-
-.price-tag-value {
-  font-size: 15px;
-  font-weight: 700;
-  color: var(--blue-dark);
-  line-height: 1;
-}
-
-/* ÉPINGLES */
-.pin {
-  position: absolute;
-  width: 9px;
-  height: 9px;
-  background: radial-gradient(circle, #e63946, #a4161a);
-  border-radius: 50%;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.3), inset 0 1px 1px rgba(255,255,255,0.3);
-  z-index: 50;
-}
-
-.pin::after {
-  content: '';
-  position: absolute;
-  bottom: -3px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 1.5px;
-  height: 4px;
-  background: linear-gradient(to bottom, #8d99ae, #2b2d42);
-  box-shadow: 0 1px 2px rgba(0,0,0,0.2);
-}
-
-.pin-1 { top: 78mm; left: 50%; transform: translateX(-50%); }
-.pin-2 { top: 42mm; right: 43mm; }
-.pin-3 { top: 143mm; left: 40mm; }
-.pin-4 { top: 146mm; right: 43mm; }
-
-
-/* ============================================
-   PAGE 7 : JOURNÉE D'ÉPOQUE
-   Style ANCIEN conservé
-   ============================================ */
-
-.journee-container {
-  padding: var(--spacing-lg) 0;
-}
-
-.journee-header {
-  text-align: center;
-  margin-bottom: var(--spacing-xxl);
-}
-
-.journee-title {
-  font-family: var(--font-decorative);
-  font-size: 36px;
-  color: var(--gold-medium);
-  margin-bottom: var(--spacing-md);
-  font-style: italic;
-}
-
-.journee-subtitle {
-  font-size: 14px;
-  color: var(--blue-light);
-  text-transform: uppercase;
-  letter-spacing: 2px;
-}
-
-.journee-block {
-  margin-bottom: var(--spacing-xl);
-  padding: var(--spacing-lg);
-  background: var(--cream);
-  border-left: 4px solid var(--gold-light);
-  position: relative;
-}
-
-.journee-block::before {
-  content: '';
-  position: absolute;
-  left: -10px;
-  top: 20px;
-  width: 12px;
-  height: 12px;
-  background: var(--gold-medium);
-  border-radius: 50%;
-  border: 3px solid var(--white-pure);
-}
-
-.journee-time {
-  font-family: var(--font-heading);
-  font-size: 18px;
-  color: var(--gold-medium);
-  margin-bottom: var(--spacing-sm);
-  text-transform: uppercase;
-  letter-spacing: 1.5px;
-}
-
-.journee-text {
-  font-family: var(--font-decorative);
-  font-size: 15px;
-  line-height: 1.8;
-  color: var(--blue-dark);
-}
-
-.journee-text strong {
-  color: var(--gold-dark);
-}
-
-.journee-sensory {
-  background: var(--white-pure);
-  padding: var(--spacing-md);
-  margin-top: var(--spacing-md);
-  border: 1px dashed var(--gold-light);
-  font-size: 13px;
-  font-style: italic;
-  color: var(--blue-light);
-}
-
-.journee-footer {
-  margin-top: var(--spacing-xxl);
-  padding: var(--spacing-lg);
-  background: var(--gold-extralight);
-  text-align: center;
-  border-radius: 4px;
-}
-
-.journee-footer-text {
-  font-family: var(--font-decorative);
-  font-size: 16px;
-  line-height: 1.7;
-  color: var(--blue-dark);
-}
-
-
-/* ============================================
-   PAGE 8 : NOSTALGIE
-   Style ANCIEN conservé
-   ============================================ */
-
-.page.nostalgie-page {
-  padding: 11mm;
-}
-
-.header {
-  text-align: center;
-  margin-bottom: 14px;
-  padding-bottom: 10px;
-  border-bottom: 2px solid var(--gold-light);
-}
-
-.header-title {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 32px;
-  font-weight: 700;
-  color: var(--blue-dark);
-  letter-spacing: 5px;
-  text-transform: uppercase;
-  margin-bottom: 3px;
-}
-
-.header-subtitle {
-  font-size: 10px;
-  color: var(--gold-medium);
-  font-style: italic;
-  font-weight: 300;
-  letter-spacing: 1.5px;
-}
-
-/* JOURNÉE TYPE */
-.journee-box {
-  background: linear-gradient(135deg, #f5f5f0 0%, #ffffff 100%);
-  border: 2px solid var(--gold-light);
-  padding: 12px 14px;
-  margin-bottom: 13px;
-  box-shadow: 0 3px 10px rgba(0,0,0,0.06);
-}
-
-.journee-box .journee-header {
-  text-align: center;
-  margin-bottom: 10px;
-  padding-bottom: 8px;
-  border-bottom: 1px solid var(--gold-light);
-}
-
-.journee-emoji {
-  font-size: 26px;
-  display: block;
-  margin-bottom: 4px;
-}
-
-.journee-box .journee-title {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 16px;
-  font-weight: 600;
-  color: var(--blue-dark);
-  letter-spacing: 1.5px;
-  margin-bottom: 2px;
-}
-
-.journee-age {
-  font-size: 10px;
-  color: var(--gold-medium);
-  font-style: italic;
-}
-
-.journee-content {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 12px;
-}
-
-.moment {
-  text-align: center;
-}
-
-.moment-icon {
-  font-size: 22px;
-  margin-bottom: 5px;
-}
-
-.moment-label {
-  font-size: 8px;
-  font-weight: 700;
-  color: var(--gold-medium);
-  text-transform: uppercase;
-  letter-spacing: 0.8px;
-  margin-bottom: 5px;
-}
-
-.moment-text {
-  font-size: 9.5px;
-  color: #333;
-  line-height: 1.4;
-  font-style: italic;
-}
-
-/* GRILLE PRINCIPALE */
-.content-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 12px;
-  margin-bottom: 12px;
-}
-
-.section {
-  margin-bottom: 10px;
-}
-
-.section-header {
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  margin-bottom: 6px;
-  padding-bottom: 4px;
-  border-bottom: 2px solid var(--gold-light);
-}
-
-.section-icon {
-  font-size: 16px;
-}
-
-.section .section-title {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 13px;
-  font-weight: 600;
-  color: var(--blue-dark);
-  letter-spacing: 0.4px;
-  border: none;
-  padding: 0;
-  margin: 0;
-  text-align: left;
-}
-
-.items {
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
-}
-
-.item {
-  background: #f5f5f0;
-  padding: 6px 10px;
-  border-left: 3px solid var(--gold-light);
-  font-size: 10.5px;
-  color: #333;
-  font-weight: 500;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.04);
-}
-
-.tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 5px;
-  margin-top: 4px;
-}
-
-.tag {
-  background: var(--gold-medium);
-  color: white;
-  padding: 4px 10px;
-  border-radius: 14px;
-  font-size: 9.5px;
-  font-weight: 600;
-  box-shadow: 0 2px 5px rgba(201, 169, 97, 0.25);
-}
-
-/* POST-IT OBJETS CULTES */
-.postit-section {
-  margin-top: 12px;
-  padding: 12px 14px;
-  background: #fff9e6;
-  border: 2px dashed var(--gold-light);
-  position: relative;
-  box-shadow: 0 3px 8px rgba(0,0,0,0.08);
-}
-
-.postit-section::before {
-  content: '';
-  position: absolute;
-  top: -6px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 55px;
-  height: 13px;
-  background: rgba(255, 253, 208, 0.75);
-  box-shadow: 0 1px 3px rgba(0,0,0,0.15);
-}
-
-.postit-section .postit-title {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 13px;
-  font-weight: 600;
-  color: var(--blue-dark);
-  text-align: center;
-  margin-bottom: 8px;
-  border: none;
-}
-
-.postit-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 8px;
-}
-
-.postit-section .postit-item {
-  position: relative;
-  text-align: center;
-  font-size: 10px;
-  color: #333;
-  font-weight: 500;
-  padding-left: 4px;
-}
-
-
-/* ============================================
-   PAGE 9 : STATS VIE (Toi Aujourd'hui)
-   Style ANCIEN conservé + AMÉLIORATIONS
-   ============================================ */
-
-.page.stats-page {
-  padding: 25px 40px 20px;
-  background: linear-gradient(to bottom, #fdfcfa 0%, #ffffff 100%);
-}
-
-.stats-page .header {
-  text-align: center;
-  margin-bottom: 20px;
-  border: none;
-}
-
-.stats-page .main-title {
-  font-size: 30px;
-  font-weight: 400;
-  color: var(--blue-dark);
-  letter-spacing: 3px;
-  text-transform: uppercase;
-  margin-bottom: 10px;
-}
-
-.stats-page .subtitle {
-  font-size: 12px;
-  color: var(--gold-medium);
-  font-style: italic;
-  letter-spacing: 1.5px;
-}
-
-/* Age central */
-.age-display {
-  text-align: center;
-  margin: 20px 0 25px;
-}
-
-.age-number {
-  font-size: 50px;
-  font-weight: 300;
-  color: var(--gold-medium);
-  letter-spacing: 2px;
-}
-
-/* Grille de statistiques - COMPACTE */
-.stats-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 12px;
-  margin-bottom: 25px;
-}
-
-.stat-card {
-  background: white;
-  border: 2px solid rgba(201, 169, 97, 0.2);
-  border-radius: 8px;
-  padding: 14px 12px;
-  text-align: center;
-  transition: all 0.4s ease;
-}
-
-.stat-card:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 6px 20px rgba(201, 169, 97, 0.2);
-  border-color: var(--gold-medium);
-}
-
-.stat-emoji {
-  font-size: 28px;
-  margin-bottom: 8px;
-  display: block;
-}
-
-.stat-value {
-  font-size: 22px;
-  font-weight: 600;
-  color: var(--gold-medium);
-  margin-bottom: 6px;
-}
-
-.stat-label {
-  font-size: 9px;
-  color: #5a5a5a;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  line-height: 1.3;
-}
-
-/* Section monde - COMPACTE */
-.world-section {
-  background: linear-gradient(135deg, var(--blue-dark) 0%, #1a2f47 100%);
-  padding: 20px 25px;
-  margin: 0 -25px;
-  position: relative;
-}
-
-.world-section::before,
-.world-section::after {
-  content: '';
-  position: absolute;
-  left: 0;
-  right: 0;
-  height: 2px;
-  background: linear-gradient(90deg, transparent 0%, var(--gold-medium) 50%, transparent 100%);
-}
-
-.world-section::before { top: 0; }
-.world-section::after { bottom: 0; }
-
-.world-title {
-  text-align: center;
-  font-size: 14px;
-  color: var(--gold-medium);
-  font-style: italic;
-  margin-bottom: 16px;
-  letter-spacing: 1.5px;
-}
-
-.world-stats {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 10px;
-}
-
-.world-card {
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(201, 169, 97, 0.3);
-  border-radius: 6px;
-  padding: 12px 10px;
-  text-align: center;
-  transition: all 0.4s ease;
-}
-
-.world-card:hover {
-  background: rgba(201, 169, 97, 0.1);
-  border-color: var(--gold-medium);
-  transform: translateY(-2px);
-}
-
-.world-value {
-  font-size: 18px;
-  font-weight: 700;
-  color: #f4e5c3;
-  margin-bottom: 6px;
-}
-
-.world-label {
-  font-size: 8px;
-  color: #b8a379;
-  text-transform: uppercase;
-  letter-spacing: 0.8px;
-  line-height: 1.2;
-}
-
-
-/* ============================================
-   PAGE 10 : TIMELINE (Ton Époque)
-   Style ANCIEN conservé + CORRECTION A4
-   ============================================ */
-
-.page.timeline-page {
-  padding: 18px 30px 15px;
-  background: linear-gradient(135deg, var(--blue-dark) 0%, #1a2f47 100%);
-  color: #f4e5c3;
-}
-
-.timeline-page .header {
-  text-align: center;
-  margin-bottom: 14px;
-  border: none;
-}
-
-.timeline-page .main-title {
-  font-size: 24px;
-  font-weight: 400;
-  color: #f4e5c3;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  margin-bottom: 6px;
-}
-
-.timeline-page .subtitle {
-  font-size: 10px;
-  color: var(--gold-medium);
-  font-style: italic;
-  letter-spacing: 1.5px;
-}
-
-/* Timeline section COMPACTE */
-.timeline-section {
-  margin-bottom: 16px;
-}
-
-.timeline-section .section-title {
-  text-align: center;
-  font-size: 12px;
-  color: var(--gold-medium);
-  font-style: italic;
-  margin-bottom: 12px;
-  letter-spacing: 1.5px;
-  border: none;
-}
-
-.timeline-container {
-  position: relative;
-  max-width: 600px;
-  margin: 0 auto;
-}
-
-.timeline-container::before {
-  content: '';
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
+  left: 20px;
   top: 0;
   bottom: 0;
-  width: 2px;
-  background: linear-gradient(180deg, var(--gold-medium) 0%, rgba(201, 169, 97, 0.3) 100%);
+  width: 4px;
+  background: var(--gold-gradient-deep);
+  box-shadow: var(--shadow-gold-soft);
 }
 
 .timeline-item {
-  display: flex;
-  margin-bottom: 10px;
   position: relative;
+  margin-bottom: var(--spacing-lg);
+  padding: var(--spacing-md);
+  background: var(--ivory-soft);
+  border-left: 3px solid var(--gold-brilliant);
+  box-shadow: var(--shadow-gold-soft);
 }
 
-.timeline-item.left { justify-content: flex-start; }
-.timeline-item.left .timeline-content { margin-right: auto; text-align: right; }
-
-.timeline-item.right { justify-content: flex-end; }
-.timeline-item.right .timeline-content { margin-left: auto; text-align: left; }
-
-.timeline-content {
-  width: 44%;
-  background: rgba(255, 255, 255, 0.03);
-  border-left: 3px solid var(--gold-medium);
-  border-radius: 5px;
-  padding: 8px 10px;
-  transition: all 0.4s ease;
-}
-
-.timeline-item.right .timeline-content {
-  border-left: none;
-  border-right: 3px solid var(--gold-medium);
-}
-
-.timeline-content:hover {
-  background: rgba(201, 169, 97, 0.08);
-  transform: scale(1.02);
-}
-
-.timeline-dot {
+.timeline-item::before {
+  content: '◆';
   position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  width: 10px;
-  height: 10px;
-  background: var(--gold-medium);
-  border: 2px solid #1a2f47;
+  left: -47px;
+  top: 20px;
+  font-size: 24px;
+  color: var(--gold-brilliant);
+  background: var(--ivory-pure);
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   border-radius: 50%;
-  z-index: 2;
+  border: 3px solid var(--gold-brilliant);
+  box-shadow: var(--shadow-gold-medium);
+  text-shadow: var(--glow-soft);
 }
 
 .timeline-year {
-  display: inline-block;
-  font-size: 9px;
-  color: #d4af37;
+  font-family: var(--font-luxury);
+  font-size: 24px;
   font-weight: 700;
-  margin-bottom: 3px;
-  padding: 1px 4px;
-  background: rgba(201, 169, 97, 0.15);
-  border-radius: 3px;
+  color: var(--gold-brilliant);
+  margin-bottom: var(--spacing-xs);
+  text-shadow: var(--glow-soft);
 }
 
-.timeline-emoji {
-  font-size: 12px;
-  margin-right: 4px;
+.timeline-content {
+  font-family: var(--font-elegant);
+  font-size: 15px;
+  color: var(--navy-dark);
+  line-height: 1.7;
 }
 
-.timeline-event {
-  font-size: 10px;
-  color: #f4e5c3;
-  font-weight: 700;
-  margin-bottom: 2px;
-}
-
-.timeline-desc {
-  font-size: 8px;
-  color: #b8a379;
-  line-height: 1.2;
-}
-
-/* Sections Culture & Sport COMPACTES */
-.content-section {
-  margin-bottom: 14px;
-}
-
-.cards-grid {
+/* Stats grid */
+.stats-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 8px;
-}
-
-.content-card {
-  background: rgba(255, 255, 255, 0.03);
-  border-left: 3px solid var(--gold-medium);
-  border-radius: 5px;
-  padding: 8px 10px;
-  transition: all 0.4s ease;
-}
-
-.content-card:hover {
-  transform: translateX(4px);
-  background: rgba(201, 169, 97, 0.08);
-}
-
-.card-icon {
-  font-size: 16px;
-  margin-bottom: 4px;
-  display: block;
-}
-
-.card-title {
-  font-size: 10px;
-  font-weight: 700;
-  color: #f4e5c3;
-  margin-bottom: 3px;
-}
-
-.card-desc {
-  font-size: 8px;
-  color: #b8a379;
-  line-height: 1.2;
-}
-
-/* Footer COMPACT */
-.timeline-page .footer {
-  position: absolute;
-  bottom: 12px;
-  left: 30px;
-  right: 30px;
-  text-align: center;
-  padding: 6px;
-  border-top: 1px solid rgba(201, 169, 97, 0.2);
-}
-
-.footer-text {
-  font-size: 8px;
-  color: #9b8556;
-  font-style: italic;
-  line-height: 1.3;
-}
-
-
-/* ============================================
-   PAGE 11 : MESSAGE PERSONNEL (Lettre)
-   Style ANCIEN conservé
-   ============================================ */
-
-.letter-page {
-  background: linear-gradient(to bottom, #fdfcfa, #f8f6f3);
-  position: relative;
-  overflow: hidden;
-}
-
-.letter-texture {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  opacity: 0.03;
-  background-image: 
-    repeating-linear-gradient(
-      0deg,
-      transparent,
-      transparent 2px,
-      rgba(11, 26, 43, 0.02) 2px,
-      rgba(11, 26, 43, 0.02) 4px
-    );
-  pointer-events: none;
-}
-
-.letter-envelope-icon {
-  position: absolute;
-  top: 15mm;
-  right: 15mm;
-  font-size: 48px;
-  color: var(--gold-light);
-  opacity: 0.3;
-  transform: rotate(15deg);
-}
-
-.letter-content {
-  max-width: 550px;
-  margin: 0 auto;
-  padding-top: 40px;
-}
-
-.letter-header {
-  text-align: center;
-  margin-bottom: var(--spacing-xxl);
-  padding-bottom: var(--spacing-lg);
-  border-bottom: 2px solid var(--gold-light);
-}
-
-.letter-title {
-  font-family: var(--font-decorative);
-  font-size: 36px;
-  color: var(--gold-medium);
-  margin-bottom: var(--spacing-sm);
-  font-style: italic;
-}
-
-.letter-subtitle {
-  font-size: 13px;
-  color: var(--blue-light);
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  font-weight: 300;
-}
-
-.letter-decorative-line {
-  width: 80px;
-  height: 2px;
-  background: var(--gold-gradient);
-  margin: var(--spacing-md) auto;
-}
-
-.letter-body-container {
-  background: var(--white-pure);
-  padding: var(--spacing-xl);
-  border-left: 3px solid var(--gold-light);
-  box-shadow: var(--shadow-soft);
-}
-
-.letter-recipient {
-  font-family: var(--font-decorative);
-  font-size: 18px;
-  color: var(--blue-dark);
-  margin-bottom: var(--spacing-lg);
-  font-weight: 600;
-}
-
-.letter-body {
-  font-family: var(--font-decorative);
-  font-size: 15px;
-  line-height: 2;
-  color: var(--blue-dark);
-  text-align: justify;
-  margin-bottom: var(--spacing-xxl);
-  white-space: pre-line;
-}
-
-.letter-signature {
-  margin-top: var(--spacing-xxl);
-  padding-top: var(--spacing-lg);
-  border-top: 1px solid var(--gray-light);
-  text-align: right;
-}
-
-.letter-signature .signature-line {
-  font-family: var(--font-decorative);
-  font-size: 14px;
-  color: var(--blue-light);
-  margin-bottom: var(--spacing-xs);
-  font-style: italic;
-}
-
-.letter-signature .signature-name {
-  font-family: var(--font-heading);
-  font-size: 24px;
-  color: var(--gold-medium);
-  margin-bottom: var(--spacing-xs);
-}
-
-.letter-signature .signature-date {
-  font-size: 12px;
-  color: var(--blue-light);
-  font-style: italic;
-}
-
-.letter-seal {
-  position: absolute;
-  bottom: 20mm;
-  right: 20mm;
-  font-size: 48px;
-  opacity: 0.2;
-  transform: rotate(-15deg);
-}
-
-
-/* ============================================
-   PAGE 12 : CONCLUSION ÉMOTIONNELLE
-   Style ANCIEN conservé
-   ============================================ */
-
-.page.conclusion-page {
-  padding: 50px 60px;
-  background: linear-gradient(to bottom, #fdfcfa 0%, #ffffff 100%);
-}
-
-.ornement-top {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 1px;
-  background: linear-gradient(90deg, transparent 0%, rgba(212, 175, 55, 0.3) 50%, transparent 100%);
-}
-
-.conclusion-page .header {
-  text-align: center;
-  margin-bottom: 50px;
-  padding-top: 20px;
-  border: none;
-}
-
-.conclusion-page .main-title {
-  font-size: 24px;
-  font-weight: 500;
-  color: var(--blue-dark);
-  letter-spacing: 4px;
-  text-transform: uppercase;
-  margin-bottom: 16px;
-  line-height: 1.4;
-}
-
-.conclusion-page .subtitle {
-  font-size: 14px;
-  color: #9b8556;
-  font-style: italic;
-  font-weight: 300;
-  letter-spacing: 1.5px;
-}
-
-.content {
-  max-width: 520px;
-  margin: 0 auto;
-}
-
-.paragraphe {
-  font-size: 14px;
-  text-align: justify;
-  line-height: 2.1;
-  color: #3a3a3a;
-  margin-bottom: 30px;
-  hyphens: auto;
-}
-
-.paragraphe:first-of-type::first-letter {
-  font-size: 42px;
-  line-height: 1;
-  float: left;
-  margin: 5px 12px 0 0;
-  color: var(--blue-dark);
-  font-weight: 500;
-}
-
-.interlude {
-  margin: 45px 0;
-  padding: 0 30px;
-  position: relative;
-}
-
-.interlude-content {
-  text-align: center;
-  font-size: 15px;
-  line-height: 2;
-  color: #5a5a5a;
-  font-style: italic;
-  position: relative;
-  padding: 25px 0;
-}
-
-.interlude-content::before,
-.interlude-content::after {
-  content: '';
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 60px;
-  height: 1px;
-  background: linear-gradient(90deg, transparent 0%, var(--gold-medium) 50%, transparent 100%);
-}
-
-.interlude-content::before { top: 0; }
-.interlude-content::after { bottom: 0; }
-
-.interlude-symbol {
-  color: var(--gold-medium);
-  font-size: 12px;
-  margin: 0 8px;
-  opacity: 0.6;
-}
-
-.message-final-container {
-  margin-top: 45px;
-  padding: 35px 45px;
-  background: linear-gradient(135deg, rgba(11, 26, 43, 0.03) 0%, rgba(11, 26, 43, 0.06) 50%, rgba(11, 26, 43, 0.03) 100%);
-  border-left: 2px solid rgba(201, 169, 97, 0.3);
-  border-right: 2px solid rgba(201, 169, 97, 0.3);
-  position: relative;
-}
-
-.message-final-container::before {
-  content: '"';
-  position: absolute;
-  top: 12px;
-  left: 18px;
-  font-size: 50px;
-  color: rgba(201, 169, 97, 0.2);
-  font-family: Georgia, serif;
-  line-height: 1;
-}
-
-.message-final-container::after {
-  content: '"';
-  position: absolute;
-  bottom: -5px;
-  right: 18px;
-  font-size: 50px;
-  color: rgba(201, 169, 97, 0.2);
-  font-family: Georgia, serif;
-  line-height: 1;
-}
-
-.message-final {
-  font-size: 14px;
-  line-height: 2;
-  color: #2c2c2c;
-  text-align: center;
-  font-weight: 400;
-}
-
-.footer-ornement {
-  position: absolute;
-  bottom: 35px;
-  left: 50%;
-  transform: translateX(-50%);
-  text-align: center;
-}
-
-.footer-symbol {
-  color: rgba(201, 169, 97, 0.4);
-  font-size: 10px;
-  letter-spacing: 12px;
-}
-
-
-/* ============================================
-   PAGE 13 : CERTIFICAT FINAL
-   Style ANCIEN conservé
-   ============================================ */
-
-.certificate-container {
-  border: 8px double var(--gold-light);
-  padding: var(--spacing-xxl);
-  text-align: center;
-  background: radial-gradient(circle at center, var(--ivory), var(--cream));
-  position: relative;
-}
-
-.certificate-ornament-top {
-  position: absolute;
-  top: 15px;
-  left: 50%;
-  transform: translateX(-50%);
-  font-size: 24px;
-  color: var(--gold-medium);
-}
-
-.certificate-title {
-  font-family: var(--font-heading);
-  font-size: 32px;
-  color: var(--blue-dark);
-  text-transform: uppercase;
-  letter-spacing: 4px;
-  margin-bottom: var(--spacing-md);
-}
-
-.certificate-subtitle {
-  font-size: 14px;
-  color: var(--gold-medium);
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  margin-bottom: var(--spacing-lg);
-}
-
-.certificate-line-gold {
-  width: 200px;
-  height: 3px;
-  background: var(--gold-gradient);
-  margin: var(--spacing-md) auto;
-}
-
-.certificate-main-text {
-  font-family: var(--font-decorative);
-  font-size: 16px;
-  line-height: 1.8;
-  color: var(--blue-dark);
-  margin: var(--spacing-xl) 0;
-}
-
-.certificate-name {
-  font-family: var(--font-heading);
-  font-size: 42px;
-  color: var(--gold-medium);
+  gap: var(--spacing-md);
   margin: var(--spacing-lg) 0;
 }
 
-.certificate-date {
-  font-size: 18px;
-  color: var(--blue-dark);
-  margin-bottom: var(--spacing-md);
-}
-
-.certificate-phrase {
-  font-family: var(--font-decorative);
-  font-size: 15px;
-  font-style: italic;
-  color: var(--blue-light);
-  margin: var(--spacing-xl) 0;
-}
-
-.certificate-seal {
-  width: 100px;
-  height: 100px;
-  border: 4px solid var(--gold-medium);
-  border-radius: 50%;
-  margin: var(--spacing-lg) auto;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: radial-gradient(circle, var(--gold-extralight), transparent);
+.stat-card {
+  background: linear-gradient(135deg, var(--cream-rich) 0%, var(--ivory-soft) 100%);
+  border: 2px solid var(--gold-brilliant);
+  padding: var(--spacing-lg);
+  text-align: center;
   position: relative;
+  box-shadow: var(--shadow-gold-soft);
 }
 
-.seal-inner {
-  text-align: center;
-}
-
-.seal-number {
-  font-family: var(--font-heading);
-  font-size: 28px;
-  font-weight: 700;
-  color: var(--blue-dark);
-}
-
-.seal-text {
-  font-size: 8px;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  color: var(--gold-dark);
-}
-
-.certificate-signature-block {
-  display: flex;
-  justify-content: center;
-  gap: var(--spacing-xxl);
-  margin-top: var(--spacing-xl);
-}
-
-.signature-item {
-  text-align: center;
-}
-
-.signature-item .signature-line {
-  width: 150px;
-  height: 1px;
-  background: var(--blue-dark);
-  margin-bottom: var(--spacing-xs);
-}
-
-.signature-label {
-  font-size: 10px;
-  color: var(--blue-light);
-  text-transform: uppercase;
-  letter-spacing: 1px;
-}
-
-.signature-value {
-  font-size: 12px;
-  color: var(--blue-dark);
-  margin-top: var(--spacing-xs);
-}
-
-.certificate-footer {
-  margin-top: var(--spacing-lg);
-  font-size: 10px;
-  color: var(--gold-medium);
-  font-style: italic;
-}
-
-
-/* ============================================
-   PAGE 14 : QUIZZ
-   Style ANCIEN conservé + CORRECTION A4
-   ============================================ */
-
-.page.quiz-page {
-  padding: 20px 28px 18px;
-  background: white;
-}
-
-.quiz-page::before {
+.stat-card::before {
   content: '';
   position: absolute;
-  top: 12px;
-  left: 12px;
-  right: 12px;
-  bottom: 12px;
-  border: 1px solid rgba(201, 169, 97, 0.2);
-  pointer-events: none;
+  top: -2px;
+  left: 20px;
+  right: 20px;
+  height: 4px;
+  background: var(--gold-gradient-shine);
 }
 
-.quiz-page .header {
-  text-align: center;
-  margin-bottom: 12px;
-  padding: 14px 20px 10px;
-  background: linear-gradient(135deg, rgba(11, 26, 43, 0.05) 0%, rgba(11, 26, 43, 0.02) 100%);
-  border-radius: 8px;
+.stat-number {
+  font-family: var(--font-luxury);
+  font-size: 48px;
+  font-weight: 900;
+  color: var(--gold-brilliant);
+  line-height: 1;
+  margin-bottom: var(--spacing-sm);
+  text-shadow: var(--glow-gold);
+}
+
+.stat-label {
+  font-family: var(--font-modern);
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--navy-dark);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.stat-description {
+  font-family: var(--font-elegant);
+  font-size: 13px;
+  color: var(--navy-medium);
+  margin-top: var(--spacing-xs);
+  font-style: italic;
+}
+
+/* ═══════════════════════════════════════════════════════════════════
+   📰 AFFICHE JOURNAL
+   ═══════════════════════════════════════════════════════════════════ */
+
+.newspaper {
+  background: var(--cream-warm);
+  border: 5px solid var(--navy-deepest);
+  padding: var(--spacing-xl);
   position: relative;
-  border: none;
+  box-shadow: var(--shadow-deep);
 }
 
-.quiz-page .header::before {
+.newspaper::before {
   content: '';
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
-  height: 2px;
-  background: linear-gradient(90deg, transparent 0%, var(--gold-medium) 20%, #d4af37 50%, var(--gold-medium) 80%, transparent 100%);
+  height: 15px;
+  background: repeating-linear-gradient(
+    90deg,
+    var(--navy-deepest) 0px,
+    var(--navy-deepest) 2px,
+    transparent 2px,
+    transparent 5px
+  );
 }
 
-.quiz-page .main-title {
-  font-size: 22px;
-  font-weight: 700;
-  color: var(--blue-dark);
-  letter-spacing: 2px;
-  margin-bottom: 4px;
+.newspaper-header {
+  text-align: center;
+  border-bottom: 4px double var(--gold-brilliant);
+  padding-bottom: var(--spacing-lg);
+  margin-bottom: var(--spacing-xl);
 }
 
-.quiz-page .subtitle {
-  font-size: 10px;
-  color: var(--gold-medium);
-  letter-spacing: 2px;
+.newspaper-title {
+  font-family: var(--font-luxury);
+  font-size: 56px;
+  font-weight: 900;
+  color: var(--navy-deepest);
+  letter-spacing: 6px;
   text-transform: uppercase;
-  font-weight: 600;
+  margin-bottom: var(--spacing-sm);
+  text-shadow: 3px 3px 0 rgba(244, 196, 48, 0.2);
 }
 
-.instructions {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-bottom: 10px;
-  padding: 8px 14px;
-  background: linear-gradient(90deg, rgba(201, 169, 97, 0.08) 0%, rgba(201, 169, 97, 0.03) 50%, rgba(201, 169, 97, 0.08) 100%);
-  border-radius: 6px;
-  border-left: 3px solid var(--gold-medium);
-}
-
-.instructions-text {
-  font-size: 9px;
-  color: #5a5a5a;
+.newspaper-date {
+  font-family: var(--font-elegant);
+  font-size: 18px;
+  color: var(--gold-antique);
   font-style: italic;
+  letter-spacing: 3px;
 }
 
-.instructions-name {
-  font-size: 9px;
-  color: var(--blue-dark);
-  font-weight: 600;
+.newspaper-headline {
+  font-family: var(--font-luxury);
+  font-size: 36px;
+  font-weight: 900;
+  color: var(--navy-deepest);
+  text-align: center;
+  margin: var(--spacing-xl) 0 var(--spacing-lg);
+  line-height: 1.2;
+  border-top: 3px solid var(--gold-brilliant);
+  border-bottom: 3px solid var(--gold-brilliant);
+  padding: var(--spacing-lg) 0;
+  background: linear-gradient(90deg, transparent 0%, var(--ivory-soft) 50%, transparent 100%);
 }
 
-.name-line {
-  display: inline-block;
-  min-width: 90px;
-  border-bottom: 2px dotted var(--gold-medium);
-  margin-left: 5px;
+.newspaper-columns {
+  column-count: 2;
+  column-gap: var(--spacing-xl);
+  column-rule: 2px solid var(--gold-antique);
 }
 
-/* Grille de questions COMPACTE */
-.questions-container {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 10px 12px;
-  margin-top: 8px;
+.newspaper-article {
+  font-family: var(--font-refined);
+  font-size: 14px;
+  line-height: 1.8;
+  color: var(--navy-dark);
+  text-align: justify;
+  break-inside: avoid;
 }
 
-.question-block {
-  background: white;
-  border: 1px solid rgba(11, 26, 43, 0.08);
-  border-radius: 6px;
-  padding: 8px;
-  transition: all 0.3s ease;
+/* ═══════════════════════════════════════════════════════════════════
+   🎯 CERTIFICAT
+   ═══════════════════════════════════════════════════════════════════ */
+
+.certificat {
+  border: 8px solid var(--gold-brilliant);
+  padding: var(--spacing-xxl);
   position: relative;
-  overflow: hidden;
+  background: radial-gradient(circle at center, var(--ivory-pure) 0%, var(--cream-warm) 100%);
+  box-shadow: 
+    var(--shadow-gold-strong),
+    inset 0 0 100px rgba(255, 215, 0, 0.1);
 }
 
-.question-block::before {
+.certificat::before {
   content: '';
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 3px;
-  height: 100%;
-  background: linear-gradient(180deg, var(--gold-medium) 0%, #d4af37 100%);
-  opacity: 0;
-  transition: opacity 0.3s ease;
+  top: 20px;
+  left: 20px;
+  right: 20px;
+  bottom: 20px;
+  border: 3px solid var(--gold-antique);
+  pointer-events: none;
 }
 
-.question-block:hover::before {
-  opacity: 1;
-}
-
-.question-header {
-  display: flex;
-  align-items: flex-start;
-  margin-bottom: 6px;
-}
-
-.question-number {
-  width: 20px;
-  height: 20px;
-  background: linear-gradient(135deg, var(--gold-medium) 0%, #d4af37 100%);
-  color: white;
-  border-radius: 5px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 9px;
-  font-weight: 700;
-  flex-shrink: 0;
-  margin-right: 6px;
-  box-shadow: 0 2px 4px rgba(201, 169, 97, 0.3);
-}
-
-.question-text {
-  flex: 1;
-  font-size: 9px;
-  color: var(--blue-dark);
-  font-weight: 600;
-  padding-top: 2px;
-  line-height: 1.25;
-}
-
-/* Réponses */
-.answer-lines {
-  margin-top: 5px;
-}
-
-.answer-line {
-  height: 16px;
-  border-bottom: 1px solid #e8e6e3;
-  margin-bottom: 2px;
-}
-
-.answer-line.short {
-  height: 14px;
-}
-
-/* Choix binaires COMPACT */
-.answer-binary {
-  display: flex;
-  gap: 6px;
-  margin-top: 5px;
-}
-
-.binary-option {
-  flex: 1;
-  display: flex;
-  align-items: center;
-  gap: 5px;
-  padding: 5px 6px;
-  background: rgba(11, 26, 43, 0.02);
-  border: 2px solid #e8e6e3;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-.binary-option:hover,
-.binary-option.selected {
-  background: linear-gradient(135deg, rgba(201, 169, 97, 0.15) 0%, rgba(212, 175, 55, 0.1) 100%);
-  border-color: var(--gold-medium);
-}
-
-.binary-circle {
-  width: 14px;
-  height: 14px;
-  border: 2px solid var(--gold-medium);
-  border-radius: 50%;
-  background: white;
-  flex-shrink: 0;
-}
-
-.binary-option.selected .binary-circle {
-  background: linear-gradient(135deg, var(--gold-medium) 0%, #d4af37 100%);
-}
-
-.binary-label {
-  font-size: 8px;
-  color: #2c2c2c;
-  font-weight: 600;
-}
-
-/* Échelles COMPACTES */
-.scale-container {
-  margin-top: 5px;
-}
-
-.scale-labels {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 4px;
-}
-
-.scale-label {
-  font-size: 7px;
-  color: #9b8556;
-  font-style: italic;
-  font-weight: 600;
-}
-
-.scale-items {
-  display: flex;
-  gap: 4px;
-  justify-content: space-between;
-}
-
-.scale-item {
-  flex: 1;
-  height: 22px;
-  border: 2px solid #e8e6e3;
-  border-radius: 5px;
-  background: white;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 9px;
-  font-weight: 700;
-  color: #5a5a5a;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-.scale-item:hover,
-.scale-item.selected {
-  border-color: var(--gold-medium);
-  background: linear-gradient(135deg, var(--gold-medium) 0%, #d4af37 100%);
-  color: white;
-}
-
-/* Checkboxes COMPACTES */
-.answer-checkbox-group {
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
-  margin-top: 5px;
-}
-
-.checkbox-item {
-  display: flex;
-  align-items: center;
-  gap: 5px;
-  padding: 4px 6px;
-  background: rgba(11, 26, 43, 0.02);
-  border: 2px solid transparent;
-  border-radius: 4px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-.checkbox-item:hover,
-.checkbox-item.selected {
-  background: linear-gradient(135deg, rgba(201, 169, 97, 0.15) 0%, rgba(212, 175, 55, 0.1) 100%);
-  border-color: var(--gold-medium);
-}
-
-.checkbox-box {
-  width: 12px;
-  height: 12px;
-  border: 2px solid var(--gold-medium);
-  border-radius: 3px;
-  background: white;
-  flex-shrink: 0;
-}
-
-.checkbox-item.selected .checkbox-box {
-  background: linear-gradient(135deg, var(--gold-medium) 0%, #d4af37 100%);
-}
-
-.checkbox-label {
-  font-size: 8px;
-  color: #2c2c2c;
-  font-weight: 600;
-}
-
-/* Footer quizz COMPACT */
-.quiz-page .footer {
+.certificat::after {
+  content: '✦';
   position: absolute;
-  bottom: 14px;
-  left: 28px;
-  right: 28px;
+  font-size: 300px;
+  color: var(--gold-brilliant);
+  opacity: 0.08;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  text-shadow: var(--glow-gold);
+}
+
+.certificat-header {
   text-align: center;
-  padding: 8px 14px;
-  background: linear-gradient(135deg, rgba(11, 26, 43, 0.03) 0%, rgba(11, 26, 43, 0.01) 100%);
-  border-radius: 6px;
-  border-top: 2px solid rgba(201, 169, 97, 0.3);
+  margin-bottom: var(--spacing-xxl);
 }
 
-.score-section {
-  font-size: 9px;
-  color: var(--blue-dark);
-  font-weight: 600;
-  margin-bottom: 3px;
+.certificat-title {
+  font-family: var(--font-luxury);
+  font-size: 56px;
+  font-weight: 900;
+  color: var(--navy-deepest);
+  letter-spacing: 8px;
+  text-transform: uppercase;
+  margin-bottom: var(--spacing-md);
+  background: var(--gold-gradient-shine);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
-.score-line {
-  display: inline-block;
-  min-width: 35px;
-  border-bottom: 2px solid var(--gold-medium);
-  margin: 0 4px;
-}
-
-.footer-message {
-  font-size: 8px;
-  color: #9b8556;
+.certificat-subtitle {
+  font-family: var(--font-elegant);
+  font-size: 20px;
+  color: var(--gold-antique);
   font-style: italic;
+  letter-spacing: 3px;
 }
 
+.certificat-content {
+  text-align: center;
+  margin: var(--spacing-xxl) 0;
+  font-family: var(--font-elegant);
+  font-size: 18px;
+  line-height: 2;
+  color: var(--navy-dark);
+}
 
-/* ============================================
-   PAGE 15 : MESSAGE FUTUR
-   Style ANCIEN conservé
-   ============================================ */
+.certificat-name {
+  font-family: var(--font-luxury);
+  font-size: 48px;
+  font-weight: 700;
+  color: var(--gold-brilliant);
+  margin: var(--spacing-lg) 0;
+  letter-spacing: 4px;
+  text-shadow: var(--glow-gold);
+}
 
-.message-future-container {
-  min-height: 257mm;
+.certificat-seal {
+  width: 120px;
+  height: 120px;
+  border: 5px solid var(--gold-brilliant);
+  border-radius: 50%;
+  margin: var(--spacing-xl) auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--gold-gradient-radial);
+  box-shadow: var(--shadow-gold-strong);
+  position: relative;
+}
+
+.certificat-seal::before {
+  content: '✦';
+  font-size: 60px;
+  color: var(--ivory-pure);
+  text-shadow: 2px 2px 4px rgba(10, 22, 40, 0.3);
+}
+
+/* ═══════════════════════════════════════════════════════════════════
+   📅 CONTEXTE & ÉVÉNEMENTS
+   ═══════════════════════════════════════════════════════════════════ */
+
+.context-section {
+  margin: var(--spacing-xl) 0;
+}
+
+.context-title {
+  font-family: var(--font-luxury);
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--gold-brilliant);
+  text-align: center;
+  margin-bottom: var(--spacing-lg);
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  padding-bottom: var(--spacing-md);
+  border-bottom: 3px solid var(--gold-brilliant);
+  text-shadow: var(--glow-soft);
+}
+
+.event-card {
+  background: var(--ivory-soft);
+  border-left: 5px solid var(--gold-brilliant);
+  padding: var(--spacing-lg);
+  margin-bottom: var(--spacing-md);
+  box-shadow: var(--shadow-gold-soft);
+  position: relative;
+}
+
+.event-card::before {
+  content: '◆';
+  position: absolute;
+  left: -15px;
+  top: var(--spacing-lg);
+  font-size: 20px;
+  color: var(--gold-brilliant);
+  background: var(--ivory-pure);
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  border: 2px solid var(--gold-brilliant);
+  text-shadow: var(--glow-soft);
+}
+
+.event-type {
+  font-family: var(--font-modern);
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--gold-dark);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: var(--spacing-xs);
+}
+
+.event-title {
+  font-family: var(--font-luxury);
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--navy-deepest);
+  margin-bottom: var(--spacing-sm);
+}
+
+.event-description {
+  font-family: var(--font-elegant);
+  font-size: 14px;
+  color: var(--navy-medium);
+  line-height: 1.7;
+}
+
+/* ═══════════════════════════════════════════════════════════════════
+   🎨 MOODBOARD & NOSTALGIE
+   ═══════════════════════════════════════════════════════════════════ */
+
+.moodboard-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--spacing-md);
+  margin: var(--spacing-lg) 0;
+}
+
+.moodboard-item {
+  aspect-ratio: 1;
+  background: var(--cream-rich);
+  border: 3px solid var(--gold-brilliant);
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: flex-start;
-  padding: var(--spacing-xl) 0;
+  justify-content: center;
+  padding: var(--spacing-md);
+  position: relative;
+  box-shadow: var(--shadow-gold-soft);
+  transition: all 0.3s ease;
+}
+
+.moodboard-item::before {
+  content: '';
+  position: absolute;
+  top: -3px;
+  left: 15px;
+  right: 15px;
+  height: 6px;
+  background: var(--gold-gradient-shine);
+}
+
+.moodboard-icon {
+  font-size: 48px;
+  margin-bottom: var(--spacing-sm);
+  filter: drop-shadow(var(--shadow-gold-medium));
+}
+
+.moodboard-label {
+  font-family: var(--font-modern);
+  font-size: 10px;
+  font-weight: 700;
+  color: var(--gold-dark);
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  text-align: center;
+  margin-bottom: var(--spacing-xs);
+}
+
+.moodboard-value {
+  font-family: var(--font-elegant);
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--navy-deepest);
+  text-align: center;
+  line-height: 1.4;
+}
+
+/* ═══════════════════════════════════════════════════════════════════
+   ❓ QUIZZ
+   ═══════════════════════════════════════════════════════════════════ */
+
+.quiz-container {
+  margin: var(--spacing-lg) 0;
+}
+
+.quiz-question {
+  background: linear-gradient(135deg, var(--ivory-pure) 0%, var(--cream-warm) 100%);
+  border: 3px solid var(--navy-deepest);
+  padding: var(--spacing-lg);
+  margin-bottom: var(--spacing-lg);
+  position: relative;
+  box-shadow: var(--shadow-navy);
+}
+
+.quiz-question::before {
+  content: '';
+  position: absolute;
+  top: -3px;
+  left: 30px;
+  width: 80px;
+  height: 6px;
+  background: var(--gold-gradient-shine);
+}
+
+.quiz-number {
+  font-family: var(--font-luxury);
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--gold-brilliant);
+  margin-bottom: var(--spacing-sm);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.quiz-text {
+  font-family: var(--font-elegant);
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--navy-deepest);
+  margin-bottom: var(--spacing-md);
+  line-height: 1.5;
+}
+
+.quiz-options {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+}
+
+.quiz-option {
+  background: var(--ivory-soft);
+  border: 2px solid var(--gold-antique);
+  padding: var(--spacing-md);
+  font-family: var(--font-elegant);
+  font-size: 15px;
+  color: var(--navy-dark);
+  position: relative;
+  padding-left: 50px;
+  transition: all 0.3s ease;
+}
+
+.quiz-option::before {
+  content: attr(data-letter);
+  position: absolute;
+  left: var(--spacing-md);
+  top: 50%;
+  transform: translateY(-50%);
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: var(--gold-gradient-shine);
+  color: var(--ivory-pure);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-luxury);
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.quiz-option.correct {
+  background: linear-gradient(90deg, rgba(212, 175, 55, 0.2) 0%, transparent 100%);
+  border-color: var(--gold-brilliant);
+  border-width: 3px;
+}
+
+.quiz-answer {
+  background: linear-gradient(135deg, var(--navy-deepest) 0%, var(--navy-dark) 100%);
+  color: var(--ivory-pure);
+  padding: var(--spacing-lg);
+  margin-top: var(--spacing-md);
+  border-left: 5px solid var(--gold-brilliant);
+  box-shadow: var(--shadow-gold-medium);
+}
+
+.quiz-answer-label {
+  font-family: var(--font-luxury);
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--gold-brilliant);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: var(--spacing-xs);
+}
+
+.quiz-answer-text {
+  font-family: var(--font-elegant);
+  font-size: 14px;
+  line-height: 1.7;
+  color: var(--ivory-pure);
+}
+
+/* ═══════════════════════════════════════════════════════════════════
+   💬 MESSAGE PERSONNEL & FUTUR
+   ═══════════════════════════════════════════════════════════════════ */
+
+.message-container {
+  background: linear-gradient(135deg, var(--cream-rich) 0%, var(--ivory-soft) 100%);
+  border: 5px double var(--gold-brilliant);
+  padding: var(--spacing-xxl);
+  margin: var(--spacing-xl) 0;
+  position: relative;
+  box-shadow: var(--shadow-gold-strong);
+}
+
+.message-container::before {
+  content: '"';
+  position: absolute;
+  top: 20px;
+  left: 30px;
+  font-size: 120px;
+  font-family: var(--font-luxury);
+  color: var(--gold-brilliant);
+  opacity: 0.15;
+  line-height: 1;
 }
 
 .message-header {
   text-align: center;
-  margin-bottom: var(--spacing-xxl);
+  margin-bottom: var(--spacing-xl);
+}
+
+.message-icon {
+  font-size: 64px;
+  margin-bottom: var(--spacing-md);
+  filter: drop-shadow(var(--shadow-gold-medium));
 }
 
 .message-title {
-  font-family: var(--font-decorative);
+  font-family: var(--font-luxury);
   font-size: 32px;
-  color: var(--gold-medium);
-  margin-bottom: var(--spacing-md);
-  font-style: italic;
-}
-
-.message-date {
-  font-size: 16px;
-  color: var(--blue-light);
-  margin-bottom: var(--spacing-sm);
-}
-
-.message-subtitle {
-  font-size: 13px;
-  color: var(--blue-light);
+  font-weight: 700;
+  color: var(--gold-brilliant);
   text-transform: uppercase;
+  letter-spacing: 4px;
+  margin-bottom: var(--spacing-sm);
+  text-shadow: var(--glow-soft);
+}
+
+.message-from {
+  font-family: var(--font-elegant);
+  font-size: 16px;
+  color: var(--gold-antique);
+  font-style: italic;
   letter-spacing: 2px;
 }
 
-.writing-frame {
-  width: 100%;
-  max-width: 650px;
-  min-height: 400px;
-  border: 3px solid var(--gold-light);
-  padding: var(--spacing-xl);
-  background: var(--white-pure);
-  position: relative;
-  box-shadow: var(--shadow-soft);
-}
-
-.writing-frame::before,
-.writing-frame::after {
-  content: '✦';
-  position: absolute;
-  font-size: 24px;
-  color: var(--gold-light);
-}
-
-.writing-frame::before {
-  top: -12px;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-.writing-frame::after {
-  bottom: -12px;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-.writing-lines {
-  background-image: repeating-linear-gradient(
-    transparent,
-    transparent 30px,
-    var(--gray-light) 30px,
-    var(--gray-light) 31px
-  );
-  min-height: 350px;
-  padding-top: 8px;
-}
-
-.writing-prompt {
-  font-family: var(--font-decorative);
-  font-size: 14px;
-  color: var(--gold-medium);
-  font-style: italic;
-  margin-bottom: var(--spacing-md);
+.message-content {
+  font-family: var(--font-elegant);
+  font-size: 17px;
+  line-height: 2;
+  color: var(--navy-dark);
   text-align: center;
+  margin: var(--spacing-xl) 0;
+  padding: 0 var(--spacing-lg);
 }
 
-.instructions-box {
+.message-signature {
+  text-align: right;
   margin-top: var(--spacing-xl);
-  padding: var(--spacing-md);
-  background: var(--gold-extralight);
-  border-left: 4px solid var(--gold-medium);
-  max-width: 650px;
+  padding-top: var(--spacing-lg);
+  border-top: 2px solid var(--gold-antique);
 }
 
-.instructions-title {
-  font-family: var(--font-heading);
-  font-size: 14px;
-  color: var(--gold-dark);
-  text-transform: uppercase;
-  letter-spacing: 1.5px;
-  margin-bottom: var(--spacing-sm);
-}
-
-.instructions-box .instructions-text {
-  font-size: 13px;
-  line-height: 1.7;
-  color: var(--blue-dark);
-}
-
-.instructions-box .instructions-text li {
+.message-signature-name {
+  font-family: var(--font-luxury);
+  font-size: 24px;
+  font-weight: 600;
+  color: var(--gold-brilliant);
+  font-style: italic;
   margin-bottom: var(--spacing-xs);
 }
 
-.writing-frame .signature-line {
-  width: 200px;
-  height: 1px;
-  background: var(--blue-dark);
-  margin: var(--spacing-xl) auto 0;
-  position: relative;
+.message-signature-date {
+  font-family: var(--font-elegant);
+  font-size: 13px;
+  color: var(--navy-medium);
+  font-style: italic;
 }
 
-.writing-frame .signature-label {
-  position: absolute;
-  bottom: -25px;
-  left: 50%;
-  transform: translateX(-50%);
-  font-size: 12px;
-  color: var(--blue-light);
-  white-space: nowrap;
-}
+/* ═══════════════════════════════════════════════════════════════════
+   🎭 CONCLUSION ÉMOTIONNELLE
+   ═══════════════════════════════════════════════════════════════════ */
 
-.date-seal {
+.conclusion-container {
   text-align: center;
-  margin-top: var(--spacing-xxl);
+  padding: var(--spacing-xxl) 0;
 }
 
-.seal-circle {
-  display: inline-flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: 100px;
-  height: 100px;
-  border: 3px solid var(--gold-medium);
-  border-radius: 50%;
-  background: radial-gradient(circle, var(--gold-extralight), transparent);
+.conclusion-ornament {
+  font-size: 48px;
+  color: var(--gold-brilliant);
+  margin: var(--spacing-lg) 0;
+  text-shadow: var(--glow-gold);
 }
 
-.seal-year {
-  font-family: var(--font-heading);
+.conclusion-text {
+  font-family: var(--font-elegant);
+  font-size: 20px;
+  line-height: 2;
+  color: var(--navy-dark);
+  max-width: 600px;
+  margin: 0 auto var(--spacing-xl);
+  font-style: italic;
+}
+
+.conclusion-highlight {
+  font-family: var(--font-luxury);
   font-size: 28px;
-  color: var(--blue-dark);
   font-weight: 700;
-}
-
-.seal-text {
-  font-size: 10px;
+  color: var(--gold-brilliant);
+  margin: var(--spacing-xl) 0;
   text-transform: uppercase;
-  letter-spacing: 1.5px;
-  color: var(--blue-light);
+  letter-spacing: 3px;
+  text-shadow: var(--glow-soft);
 }
 
+.conclusion-final {
+  background: linear-gradient(135deg, var(--navy-deepest) 0%, var(--navy-dark) 100%);
+  color: var(--ivory-pure);
+  padding: var(--spacing-xl);
+  border: 4px solid var(--gold-brilliant);
+  margin-top: var(--spacing-xxl);
+  box-shadow: var(--shadow-gold-strong);
+}
 
-/* ============================================
-   IMPRESSION
-   ============================================ */
+.conclusion-final-text {
+  font-family: var(--font-elegant);
+  font-size: 18px;
+  line-height: 1.8;
+  color: var(--ivory-pure);
+  margin: 0;
+}
+
+/* ═══════════════════════════════════════════════════════════════════
+   🛠️ UTILITAIRES
+   ═══════════════════════════════════════════════════════════════════ */
+
+/* Marges */
+.mt-xs { margin-top: var(--spacing-xs); }
+.mt-sm { margin-top: var(--spacing-sm); }
+.mt-md { margin-top: var(--spacing-md); }
+.mt-lg { margin-top: var(--spacing-lg); }
+.mt-xl { margin-top: var(--spacing-xl); }
+.mt-xxl { margin-top: var(--spacing-xxl); }
+
+.mb-xs { margin-bottom: var(--spacing-xs); }
+.mb-sm { margin-bottom: var(--spacing-sm); }
+.mb-md { margin-bottom: var(--spacing-md); }
+.mb-lg { margin-bottom: var(--spacing-lg); }
+.mb-xl { margin-bottom: var(--spacing-xl); }
+.mb-xxl { margin-bottom: var(--spacing-xxl); }
+
+/* Text alignment */
+.text-left { text-align: left !important; }
+.text-center { text-align: center !important; }
+.text-right { text-align: right !important; }
+.text-justify { text-align: justify !important; }
+
+/* Text transform */
+.text-uppercase { text-transform: uppercase !important; }
+.text-lowercase { text-transform: lowercase !important; }
+.text-capitalize { text-transform: capitalize !important; }
+
+/* Font weights */
+.font-light { font-weight: 300; }
+.font-normal { font-weight: 400; }
+.font-medium { font-weight: 500; }
+.font-semibold { font-weight: 600; }
+.font-bold { font-weight: 700; }
+.font-black { font-weight: 900; }
+
+/* Font styles */
+.italic { font-style: italic; }
+
+/* Colors */
+.text-gold { color: var(--gold-brilliant) !important; }
+.text-navy { color: var(--navy-deepest) !important; }
+.text-ivory { color: var(--ivory-pure) !important; }
+
+.bg-gold { background: var(--gold-gradient-shine) !important; }
+.bg-navy { background: var(--navy-deepest) !important; }
+.bg-ivory { background: var(--ivory-pure) !important; }
+
+/* ═══════════════════════════════════════════════════════════════════
+   🖨️ OPTIMISATIONS IMPRESSION
+   ═══════════════════════════════════════════════════════════════════ */
 
 @media print {
-  body {
-    background: white;
-    padding: 0;
+  * {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
   }
   
   .page {
     margin: 0;
+    padding: 25mm 28mm;
     box-shadow: none;
     page-break-after: always;
   }
   
-  @page {
-    size: A4;
-    margin: 0;
+  .page:last-child {
+    page-break-after: avoid;
+  }
+  
+  /* Forcer l'impression des backgrounds */
+  .page,
+  .identity-card,
+  .highlight-box,
+  .certificat,
+  .message-container,
+  .conclusion-final {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+  
+  /* Assurer que les dégradés d'or s'impriment */
+  h1,
+  .identity-name,
+  .certificat-title {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
   }
 }
